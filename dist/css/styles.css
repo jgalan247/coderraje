@@ -11006,6 +11006,7 @@ footer.footer .social-link:hover {
     height: 75%;
   }
 }
+/*!
 .masthead {
   min-height: 30rem;
   position: relative;
@@ -11032,7 +11033,26 @@ footer.footer .social-link:hover {
     font-size: 5.5rem;
   }
 }
+*/
+.masthead {
+  /* remove display: table; */
+  display: flex;
+  flex-direction: column;          /* stack heading & whatever else vertically */
+  justify-content: flex-start;     /* push everything to the top */
+  align-items: center;             /* center horizontally if you want */
+  
+  min-height: 30rem;
+  width: 100%;
+  padding: 8rem 0;                  /* you can tweak these values */
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 100%),url("../assets/img/bg-masthead.jpg") center/cover no-repeat;
+}
 
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;                 /* full viewport if you still want that */
+  }
+}
 .portfolio-item {
   display: block;
   position: relative;
