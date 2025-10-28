@@ -1,210 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Coderra — IT consultancy supporting education: e-commerce web development, programming workshops, IoT, and AI CPDs.">
-  <meta name="author" content="Coderra">
+  <meta name="description" content="Coderra — Premium IT consultancy for education. Transforming learning through AI, e-commerce, IoT, and innovative technology solutions.">
   <title>Coderra | IT Consultancy for Education</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+
+  <!-- Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js" defer></script>
 </head>
-<body class="antialiased bg-gray-50">
+<body class="bg-white text-gray-900">
 
   <!-- Navigation -->
-  <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex-shrink-0">
-          <a href="#home" class="text-2xl font-bold text-gray-900">Coderra</a>
+  <nav class="fixed w-full top-0 z-50 nav-blur">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="#home" class="text-2xl font-bold gradient-text">Coderra</a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-10">
+          <a href="#services" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Services</a>
+          <a href="#work" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Work</a>
+          <a href="#about" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">About</a>
+          <a href="#contact" class="btn-premium">Get Started</a>
         </div>
-        <div class="hidden md:flex space-x-8">
-          <a href="#home" class="text-gray-700 hover:text-coderra-blue transition-colors font-medium">Home</a>
-          <a href="#services" class="text-gray-700 hover:text-coderra-blue transition-colors font-medium">Services</a>
-          <a href="#portfolio" class="text-gray-700 hover:text-coderra-blue transition-colors font-medium">Portfolio</a>
-          <a href="#contact" class="text-gray-700 hover:text-coderra-blue transition-colors font-medium">Contact</a>
-        </div>
-        <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-coderra-blue">
-          <i class="fas fa-bars text-xl"></i>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
         </button>
       </div>
     </div>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-      <div class="px-4 py-3 space-y-3">
-        <a href="#home" class="block text-gray-700 hover:text-coderra-blue transition-colors font-medium">Home</a>
-        <a href="#services" class="block text-gray-700 hover:text-coderra-blue transition-colors font-medium">Services</a>
-        <a href="#portfolio" class="block text-gray-700 hover:text-coderra-blue transition-colors font-medium">Portfolio</a>
-        <a href="#contact" class="block text-gray-700 hover:text-coderra-blue transition-colors font-medium">Contact</a>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100">
+      <div class="px-6 py-6 space-y-4">
+        <a href="#services" class="block text-gray-600 hover:text-primary-600 font-medium">Services</a>
+        <a href="#work" class="block text-gray-600 hover:text-primary-600 font-medium">Work</a>
+        <a href="#about" class="block text-gray-600 hover:text-primary-600 font-medium">About</a>
+        <a href="#contact" class="block w-full text-center btn-premium">Get Started</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="relative h-screen flex items-center justify-center text-white">
-    <div class="absolute inset-0 z-0">
-      <img src="assets/img/bg-masthead.jpg" alt="Coderra Background" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/70 to-gray-900/80"></div>
+  <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <!-- Background Elements -->
+    <div class="blur-fade"></div>
+    <div class="absolute inset-0 -z-10 opacity-30">
+      <img src="assets/img/bg-masthead.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white"></div>
     </div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
-      <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Coderra</h1>
-      <p class="text-xl md:text-2xl mb-8 text-gray-200 font-light">We partner with you to bring your vision to life</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#services" class="btn-primary">Explore Our Services</a>
-        <a href="#contact" class="btn-secondary">Get In Touch</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Who We Are Section -->
-  <section id="about" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">Who We Are</h2>
-        <div class="w-20 h-1 bg-coderra-blue mx-auto mb-6"></div>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Coderra is an IT consultancy supporting education. We help schools, colleges, and training providers
-          adopt the right technology — from secure e-commerce sites to hands-on programming workshops and AI
-          professional development. Founded by Dr&nbsp;Galan, our focus is practical, reliable solutions that
-          make a measurable impact in the classroom and beyond.
-        </p>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-32">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Content -->
+        <div class="animate-slide-up">
+          <div class="inline-flex items-center px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-semibold mb-8 border border-primary-100">
+            <span class="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse"></span>
+            Transforming Education Through Technology
+          </div>
+
+          <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1] text-balance">
+            Empower <span class="gradient-text">Learning</span> With Innovation
+          </h1>
+
+          <p class="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-2xl">
+            We partner with educational institutions to build cutting-edge solutions that inspire students and empower educators.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#services" class="btn-premium text-center">Explore Services</a>
+            <a href="#work" class="btn-secondary text-center">View Our Work</a>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-gray-200">
+            <div>
+              <div class="text-4xl font-bold gradient-text mb-2">15+</div>
+              <div class="text-gray-600 text-sm">Years Experience</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold gradient-text mb-2">100+</div>
+              <div class="text-gray-600 text-sm">Projects Delivered</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold gradient-text mb-2">98%</div>
+              <div class="text-gray-600 text-sm">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Element -->
+        <div class="hidden lg:block relative animate-float">
+          <div class="absolute -inset-4 bg-gradient-to-r from-primary-400 to-accent-purple opacity-20 blur-3xl rounded-full"></div>
+          <div class="relative glass-card p-12">
+            <div class="grid grid-cols-2 gap-6">
+              <div class="aspect-square rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 p-6 flex items-center justify-center text-white">
+                <i data-lucide="brain" class="w-16 h-16"></i>
+              </div>
+              <div class="aspect-square rounded-2xl bg-gradient-to-br from-accent-purple to-accent-pink p-6 flex items-center justify-center text-white">
+                <i data-lucide="shopping-cart" class="w-16 h-16"></i>
+              </div>
+              <div class="aspect-square rounded-2xl bg-gradient-to-br from-accent-teal to-emerald-500 p-6 flex items-center justify-center text-white">
+                <i data-lucide="cpu" class="w-16 h-16"></i>
+              </div>
+              <div class="aspect-square rounded-2xl bg-gradient-to-br from-accent-orange to-red-500 p-6 flex items-center justify-center text-white">
+                <i data-lucide="graduation-cap" class="w-16 h-16"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-        <div class="w-20 h-1 bg-coderra-blue mx-auto"></div>
+  <section id="services" class="py-32 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Comprehensive solutions designed to elevate educational experiences and outcomes</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- IT Consultancy -->
-        <div class="card group">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-coderra-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-coderra-blue/20 transition-all">
-              <i class="fas fa-user-tie text-3xl text-coderra-blue"></i>
+        <div class="feature-card scroll-reveal group">
+          <div class="relative z-10">
+            <div class="icon-wrapper mb-6">
+              <i data-lucide="users" class="w-8 h-8 text-primary-600"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">IT Consultancy</h3>
-            <p class="text-gray-600">
-              Strategic advice, technical setup, and ongoing support tailored to schools and learning providers.
-            </p>
+            <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-600 transition-colors">IT Consultancy</h3>
+            <p class="text-gray-600 leading-relaxed">Strategic guidance and technical expertise tailored for educational institutions.</p>
           </div>
         </div>
 
         <!-- E-Commerce -->
-        <div class="card group">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-coderra-purple/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-coderra-purple/20 transition-all">
-              <i class="fas fa-shopping-cart text-3xl text-coderra-purple"></i>
+        <div class="feature-card scroll-reveal group" style="animation-delay: 0.1s">
+          <div class="relative z-10">
+            <div class="icon-wrapper mb-6">
+              <i data-lucide="shopping-bag" class="w-8 h-8 text-accent-purple"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">E-Commerce Development</h3>
-            <p class="text-gray-600">
-              Secure, accessible online stores with clear content, painless payments, and professional delivery.
-            </p>
+            <h3 class="text-2xl font-bold mb-4 group-hover:text-accent-purple transition-colors">E-Commerce</h3>
+            <p class="text-gray-600 leading-relaxed">Secure, scalable online stores with seamless payment integration and management.</p>
           </div>
         </div>
 
-        <!-- Education & Programming -->
-        <div class="card group">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-coderra-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-coderra-orange/20 transition-all">
-              <i class="fas fa-chalkboard-teacher text-3xl text-coderra-orange"></i>
+        <!-- AI Solutions -->
+        <div class="feature-card scroll-reveal group" style="animation-delay: 0.2s">
+          <div class="relative z-10">
+            <div class="icon-wrapper mb-6">
+              <i data-lucide="sparkles" class="w-8 h-8 text-primary-600"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Programming Workshops</h3>
-            <p class="text-gray-600">
-              Practical workshops in Python, web development, and robotics that build real confidence.
-            </p>
+            <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-600 transition-colors">AI Solutions</h3>
+            <p class="text-gray-600 leading-relaxed">Responsible AI implementation with classroom-ready tools and ethical frameworks.</p>
           </div>
         </div>
 
-        <!-- AI Training -->
-        <div class="card group">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-coderra-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-coderra-blue/20 transition-all">
-              <i class="fas fa-robot text-3xl text-coderra-blue"></i>
+        <!-- Education -->
+        <div class="feature-card scroll-reveal group" style="animation-delay: 0.3s">
+          <div class="relative z-10">
+            <div class="icon-wrapper mb-6">
+              <i data-lucide="book-open" class="w-8 h-8 text-accent-orange"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Artificial Intelligence</h3>
-            <p class="text-gray-600">
-              CPDs on responsible AI in the curriculum with classroom-ready tools and policy alignment.
-            </p>
+            <h3 class="text-2xl font-bold mb-4 group-hover:text-accent-orange transition-colors">Education</h3>
+            <p class="text-gray-600 leading-relaxed">Hands-on programming workshops and robotics training for all key stages.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">Selected Work</h2>
-        <div class="w-20 h-1 bg-coderra-blue mx-auto"></div>
+  <!-- Work Showcase -->
+  <section id="work" class="py-32 bg-white relative overflow-hidden">
+    <div class="blur-fade"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-subtitle">Transformative solutions delivering measurable impact across education sectors</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- AI in the Workplace -->
-        <a href="web-development.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64">
-          <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700"></div>
-          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
-          <div class="relative h-full p-8 flex flex-col justify-between text-white">
-            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-              <i class="fas fa-brain text-2xl"></i>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- AI Project -->
+        <a href="web-development.html" class="service-tile bg-gradient-to-br from-blue-600 to-primary-700 text-white scroll-reveal group">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
+          <div class="relative z-10">
+            <div class="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+              <i data-lucide="brain" class="w-10 h-10"></i>
             </div>
-            <div>
-              <h3 class="text-2xl font-bold mb-2">AI in the Workplace</h3>
-              <p class="text-blue-100">Automate workflows, surface insights, and scale decision-making responsibly.</p>
-            </div>
-          </div>
-        </a>
-
-        <!-- E-Commerce -->
-        <a href="ecommerce-development.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64">
-          <div class="absolute inset-0 bg-gradient-to-br from-purple-900 to-purple-600"></div>
-          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
-          <div class="relative h-full p-8 flex flex-col justify-between text-white">
-            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-              <i class="fas fa-shopping-cart text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold mb-2">E-Commerce Development</h3>
-              <p class="text-purple-100">Secure, responsive stores with streamlined checkout and catalogue management.</p>
+            <h3 class="text-3xl font-bold mb-4">AI in the Workplace</h3>
+            <p class="text-blue-100 text-lg leading-relaxed mb-8">Intelligent automation and data-driven insights that transform workflow efficiency and decision-making.</p>
+            <div class="flex items-center text-white/90 font-semibold">
+              Learn More
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
             </div>
           </div>
         </a>
 
-        <!-- IoT Solutions -->
-        <a href="iot-solutions.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64">
-          <div class="absolute inset-0 bg-gradient-to-br from-green-900 to-green-600"></div>
-          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
-          <div class="relative h-full p-8 flex flex-col justify-between text-white">
-            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-              <i class="fas fa-network-wired text-2xl"></i>
+        <!-- E-Commerce Project -->
+        <a href="ecommerce-development.html" class="service-tile bg-gradient-to-br from-purple-600 to-accent-pink text-white scroll-reveal group" style="animation-delay: 0.1s">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
+          <div class="relative z-10">
+            <div class="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+              <i data-lucide="shopping-cart" class="w-10 h-10"></i>
             </div>
-            <div>
-              <h3 class="text-2xl font-bold mb-2">IoT Solutions</h3>
-              <p class="text-green-100">From sensors to dashboards: connect devices, monitor data, act in real time.</p>
+            <h3 class="text-3xl font-bold mb-4">E-Commerce Development</h3>
+            <p class="text-purple-100 text-lg leading-relaxed mb-8">Beautiful, secure online stores with streamlined checkout experiences and powerful management tools.</p>
+            <div class="flex items-center text-white/90 font-semibold">
+              Learn More
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
             </div>
           </div>
         </a>
 
-        <!-- Education & Robotics -->
-        <a href="education-robotics.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64">
-          <div class="absolute inset-0 bg-gradient-to-br from-orange-900 to-orange-600"></div>
-          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
-          <div class="relative h-full p-8 flex flex-col justify-between text-white">
-            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-              <i class="fas fa-robot text-2xl"></i>
+        <!-- IoT Project -->
+        <a href="iot-solutions.html" class="service-tile bg-gradient-to-br from-teal-600 to-emerald-600 text-white scroll-reveal group" style="animation-delay: 0.2s">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
+          <div class="relative z-10">
+            <div class="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+              <i data-lucide="cpu" class="w-10 h-10"></i>
             </div>
-            <div>
-              <h3 class="text-2xl font-bold mb-2">Education & Robotics</h3>
-              <p class="text-orange-100">Curriculum-aligned programming and robotics training for staff and learners.</p>
+            <h3 class="text-3xl font-bold mb-4">IoT Solutions</h3>
+            <p class="text-teal-100 text-lg leading-relaxed mb-8">Connected devices and smart systems that bridge digital innovation with real-world applications.</p>
+            <div class="flex items-center text-white/90 font-semibold">
+              Learn More
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Education Project -->
+        <a href="education-robotics.html" class="service-tile bg-gradient-to-br from-orange-600 to-red-600 text-white scroll-reveal group" style="animation-delay: 0.3s">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
+          <div class="relative z-10">
+            <div class="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+              <i data-lucide="graduation-cap" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-3xl font-bold mb-4">Education & Robotics</h3>
+            <p class="text-orange-100 text-lg leading-relaxed mb-8">Curriculum-aligned programming and robotics that bring computer science to life for all learners.</p>
+            <div class="flex items-center text-white/90 font-semibold">
+              Learn More
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
             </div>
           </div>
         </a>
@@ -212,21 +274,108 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 gradient-bg text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
-      <div class="w-20 h-1 bg-white mx-auto mb-8"></div>
-      <p class="text-xl text-gray-300 mb-8">
-        <i class="fas fa-envelope mr-2"></i>
-        <a href="mailto:admin@coderra.je" class="hover:text-coderra-blue transition-colors">admin@coderra.je</a>
-      </p>
-      <p class="text-sm text-gray-400">© <span id="currentYear"></span> Coderra. All rights reserved.</p>
+  <!-- About Section -->
+  <section id="about" class="py-32 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="scroll-reveal">
+          <h2 class="text-5xl font-bold mb-8">Why Choose Coderra</h2>
+          <p class="text-xl text-gray-600 leading-relaxed mb-8">
+            Founded by Dr. Galan, a PhD Computer Scientist and OCR examiner, Coderra brings academic excellence and real-world expertise to every project.
+          </p>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center mr-4">
+                <i data-lucide="check" class="w-6 h-6 text-primary-600"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-2">Expert Leadership</h4>
+                <p class="text-gray-600">PhD-level expertise with years of teaching and examination experience</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center mr-4">
+                <i data-lucide="check" class="w-6 h-6 text-primary-600"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-2">Proven Results</h4>
+                <p class="text-gray-600">Track record of delivering outstanding educational outcomes</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center mr-4">
+                <i data-lucide="check" class="w-6 h-6 text-primary-600"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-2">Practical Solutions</h4>
+                <p class="text-gray-600">Technology that works in real classrooms and educational settings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-reveal" style="animation-delay: 0.2s">
+          <div class="glass-card p-12">
+            <div class="aspect-square rounded-3xl bg-gradient-to-br from-primary-500 to-accent-purple p-12 flex items-center justify-center">
+              <div class="text-center text-white">
+                <i data-lucide="award" class="w-24 h-24 mx-auto mb-6"></i>
+                <div class="text-4xl font-bold mb-2">Excellence</div>
+                <div class="text-primary-100">In Every Project</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="py-32 bg-gray-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 animated-gradient opacity-10"></div>
+
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+      <div class="scroll-reveal">
+        <h2 class="text-5xl md:text-6xl font-bold mb-8">Ready to Transform Your Institution?</h2>
+        <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+          Let's discuss how we can help you achieve your educational technology goals
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <a href="mailto:admin@coderra.je" class="inline-flex items-center px-10 py-5 bg-white text-gray-900 rounded-xl font-semibold text-lg hover:scale-105 transition-transform shadow-2xl">
+            <i data-lucide="mail" class="w-5 h-5 mr-3"></i>
+            admin@coderra.je
+          </a>
+          <div class="text-gray-400">or</div>
+          <a href="tel:+441234567890" class="inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-xl font-semibold text-lg hover:scale-105 transition-transform border border-white/20">
+            <i data-lucide="phone" class="w-5 h-5 mr-3"></i>
+            Schedule a Call
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-gray-950 text-gray-400 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <div class="text-2xl font-bold text-white mb-2">Coderra</div>
+          <div class="text-sm">Transforming education through technology</div>
+        </div>
+        <div class="text-sm">
+          © <span id="currentYear"></span> Coderra. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    // Update current year
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+
+    // Update year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
     // Mobile menu toggle
@@ -237,11 +386,39 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Close mobile menu when clicking on a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
+    // Close mobile menu when clicking links
+    mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Scroll reveal animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach((el) => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
     });
   </script>

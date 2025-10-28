@@ -5,23 +5,122 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  body {
+    @apply antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
 @layer components {
-  .btn-primary {
-    @apply px-6 py-3 bg-coderra-blue text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg;
+  /* Glass morphism card */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl;
+  }
+
+  /* Premium button */
+  .btn-premium {
+    @apply relative px-8 py-4 font-semibold rounded-xl overflow-hidden transition-all duration-300;
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white;
+    @apply shadow-lg shadow-primary-500/30 hover:shadow-xl hover:shadow-primary-500/40;
+    @apply hover:scale-105 active:scale-95;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all duration-300 shadow-md hover:shadow-lg;
+    @apply px-8 py-4 font-semibold rounded-xl;
+    @apply bg-white text-gray-900 border-2 border-gray-200;
+    @apply hover:border-primary-500 hover:text-primary-600;
+    @apply transition-all duration-300 hover:scale-105 active:scale-95;
   }
 
-  .card {
-    @apply bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  /* Feature card with hover effect */
+  .feature-card {
+    @apply relative p-8 rounded-2xl bg-white border border-gray-100;
+    @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-2;
+    @apply cursor-pointer overflow-hidden;
   }
 
-  .gradient-bg {
-    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900;
+  .feature-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent;
+    @apply opacity-0 group-hover:opacity-100 transition-opacity duration-500;
+  }
+
+  /* Service tile with gradient */
+  .service-tile {
+    @apply relative p-10 rounded-3xl overflow-hidden;
+    @apply transition-all duration-500 hover:scale-[1.02];
+    @apply shadow-xl hover:shadow-2xl;
+  }
+
+  /* Section header */
+  .section-header {
+    @apply text-center mb-20;
+  }
+
+  .section-title {
+    @apply text-5xl md:text-6xl font-bold mb-6;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-primary-700 to-gray-900;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-800;
+  }
+
+  /* Blur fade background */
+  .blur-fade {
+    @apply absolute inset-0 -z-10;
+    background: radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  }
+
+  /* Animated gradient background */
+  .animated-gradient {
+    background: linear-gradient(-45deg, #0ea5e9, #3b82f6, #8b5cf6, #ec4899);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Nav styles */
+  .nav-blur {
+    @apply backdrop-blur-xl bg-white/90 border-b border-gray-100/50;
+  }
+
+  /* Scroll reveal animation */
+  .scroll-reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
+  }
+
+  .scroll-reveal.revealed {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Icon wrapper with gradient background */
+  .icon-wrapper {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center;
+    @apply bg-gradient-to-br from-primary-500/10 to-primary-600/5;
+    @apply group-hover:from-primary-500/20 group-hover:to-primary-600/10;
+    @apply transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
