@@ -1,10 +1,7 @@
-# Node modules
+# Dependencies (install locally, don't commit)
 node_modules/
 
-# Build artifacts (old structure)
-dist/
-
-# Python virtual environment
+# Python virtual environment (if needed locally)
 .venv/
 venv/
 
@@ -15,9 +12,6 @@ venv/
 .vscode/
 .idea/
 *.code-workspace
-
-# Docker
-docker-compose.override.yml
 
 # Logs
 npm-debug.log*
