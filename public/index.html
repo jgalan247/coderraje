@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coderra — IT consultancy supporting education: e-commerce web development, programming workshops, IoT, and AI CPDs.">
+  <meta name="author" content="Coderra">
+  <title>Coderra | IT Consultancy for Education</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="antialiased bg-gray-50">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="#home" class="text-2xl font-bold text-gray-900">Coderra</a>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-coderra-blue transition-colors font-medium">Home</a>
+          <a href="#services" class="text-gray-700 hover:text-coderra-blue transition-colors font-medium">Services</a>
+          <a href="#portfolio" class="text-gray-700 hover:text-coderra-blue transition-colors font-medium">Portfolio</a>
+          <a href="#contact" class="text-gray-700 hover:text-coderra-blue transition-colors font-medium">Contact</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-coderra-blue">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="px-4 py-3 space-y-3">
+        <a href="#home" class="block text-gray-700 hover:text-coderra-blue transition-colors font-medium">Home</a>
+        <a href="#services" class="block text-gray-700 hover:text-coderra-blue transition-colors font-medium">Services</a>
+        <a href="#portfolio" class="block text-gray-700 hover:text-coderra-blue transition-colors font-medium">Portfolio</a>
+        <a href="#contact" class="block text-gray-700 hover:text-coderra-blue transition-colors font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen flex items-center justify-center text-white">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/img/bg-masthead.jpg" alt="Coderra Background" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/70 to-gray-900/80"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Coderra</h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200 font-light">We partner with you to bring your vision to life</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#services" class="btn-primary">Explore Our Services</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Who We Are</h2>
+        <div class="w-20 h-1 bg-coderra-blue mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Coderra is an IT consultancy supporting education. We help schools, colleges, and training providers
+          adopt the right technology — from secure e-commerce sites to hands-on programming workshops and AI
+          professional development. Founded by Dr&nbsp;Galan, our focus is practical, reliable solutions that
+          make a measurable impact in the classroom and beyond.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+        <div class="w-20 h-1 bg-coderra-blue mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- IT Consultancy -->
+        <div class="card group">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-coderra-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-coderra-blue/20 transition-all">
+              <i class="fas fa-user-tie text-3xl text-coderra-blue"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">IT Consultancy</h3>
+            <p class="text-gray-600">
+              Strategic advice, technical setup, and ongoing support tailored to schools and learning providers.
+            </p>
+          </div>
+        </div>
+
+        <!-- E-Commerce -->
+        <div class="card group">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-coderra-purple/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-coderra-purple/20 transition-all">
+              <i class="fas fa-shopping-cart text-3xl text-coderra-purple"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">E-Commerce Development</h3>
+            <p class="text-gray-600">
+              Secure, accessible online stores with clear content, painless payments, and professional delivery.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education & Programming -->
+        <div class="card group">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-coderra-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-coderra-orange/20 transition-all">
+              <i class="fas fa-chalkboard-teacher text-3xl text-coderra-orange"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Programming Workshops</h3>
+            <p class="text-gray-600">
+              Practical workshops in Python, web development, and robotics that build real confidence.
+            </p>
+          </div>
+        </div>
+
+        <!-- AI Training -->
+        <div class="card group">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-coderra-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-coderra-blue/20 transition-all">
+              <i class="fas fa-robot text-3xl text-coderra-blue"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Artificial Intelligence</h3>
+            <p class="text-gray-600">
+              CPDs on responsible AI in the curriculum with classroom-ready tools and policy alignment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Selected Work</h2>
+        <div class="w-20 h-1 bg-coderra-blue mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- AI in the Workplace -->
+        <a href="web-development.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700"></div>
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
+          <div class="relative h-full p-8 flex flex-col justify-between text-white">
+            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i class="fas fa-brain text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">AI in the Workplace</h3>
+              <p class="text-blue-100">Automate workflows, surface insights, and scale decision-making responsibly.</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- E-Commerce -->
+        <a href="ecommerce-development.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-900 to-purple-600"></div>
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
+          <div class="relative h-full p-8 flex flex-col justify-between text-white">
+            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i class="fas fa-shopping-cart text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">E-Commerce Development</h3>
+              <p class="text-purple-100">Secure, responsive stores with streamlined checkout and catalogue management.</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- IoT Solutions -->
+        <a href="iot-solutions.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64">
+          <div class="absolute inset-0 bg-gradient-to-br from-green-900 to-green-600"></div>
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
+          <div class="relative h-full p-8 flex flex-col justify-between text-white">
+            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i class="fas fa-network-wired text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">IoT Solutions</h3>
+              <p class="text-green-100">From sensors to dashboards: connect devices, monitor data, act in real time.</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Education & Robotics -->
+        <a href="education-robotics.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-900 to-orange-600"></div>
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
+          <div class="relative h-full p-8 flex flex-col justify-between text-white">
+            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i class="fas fa-robot text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Education & Robotics</h3>
+              <p class="text-orange-100">Curriculum-aligned programming and robotics training for staff and learners.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 gradient-bg text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+      <div class="w-20 h-1 bg-white mx-auto mb-8"></div>
+      <p class="text-xl text-gray-300 mb-8">
+        <i class="fas fa-envelope mr-2"></i>
+        <a href="mailto:admin@coderra.je" class="hover:text-coderra-blue transition-colors">admin@coderra.je</a>
+      </p>
+      <p class="text-sm text-gray-400">© <span id="currentYear"></span> Coderra. All rights reserved.</p>
+    </div>
+  </section>
+
+  <script>
+    // Update current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
