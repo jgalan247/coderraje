@@ -1,0 +1,10 @@
+name: coderra
+region: nyc
+static_sites:
+  - name: web
+    github:
+      repo: jgalan247/coderraje
+      branch: main
+      deploy_on_push: true
+    source_dir: /public
+    output_dir: /
