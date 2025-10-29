@@ -3,9 +3,9 @@
   "version": "2.0.0",
   "description": "Coderra IT Consultancy Website - Modern Static Site",
   "scripts": {
-    "build:css": "npx tailwindcss -i ./src/input.css -o ./public/css/styles.css --minify",
-    "watch:css": "npx tailwindcss -i ./src/input.css -o ./public/css/styles.css --watch",
-    "serve": "python3 -m http.server 8000 --directory public"
+    "build:css": "npx tailwindcss -i ./input.css -o ../css/styles.css --minify",
+    "watch:css": "npx tailwindcss -i ./input.css -o ../css/styles.css --watch",
+    "serve": "python3 -m http.server 8000 --directory .."
   },
   "keywords": [
     "static-site",

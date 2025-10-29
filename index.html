@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coderra.je - Innovative IT Solutions for Jersey</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/img/coderra-favicon.svg">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e88e5 0%, #5e35b1 100%);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-blue-600">Coderra.je</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#work" class="text-gray-700 hover:text-blue-600">Work</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+                </div>
+                <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <p class="text-blue-600 text-sm font-semibold mb-4">• Innovative IT Solutions for Jersey Businesses</p>
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Your Local IT Partner<br/>
+                    <span class="text-blue-600">for Digital Innovation</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    From IoT solutions, web development and e-commerce platforms to integrating AI in your workflow, 
+                    we bring your digital vision to life. Our team delivers cutting-edge technology solutions for businesses 
+                    and educational institutions across Jersey.
+                </p>
+                <div class="flex gap-4 justify-center">
+                    <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+                        Discover Our Solutions
+                    </a>
+                    <a href="#work" class="bg-white border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:border-blue-600 transition font-semibold">
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Coderra.je -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Why Choose Coderra.je</h2>
+                    <p class="text-gray-600 mb-8">
+                        Our team brings extensive experience from multi-million pound IT projects across diverse sectors. 
+                        Led by Dr. Galan, a PhD Computer Scientist with deep expertise in technology consulting, 
+                        we combine technical excellence with practical problem-solving to deliver solutions that work.
+                    </p>
+
+                    <!-- Features with Icons -->
+                    <div class="space-y-6">
+                        <!-- Expert Leadership -->
+                        <div class="flex items-start gap-4">
+                            <div class="feature-icon bg-blue-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                    <path d="M4 22h16"/>
+                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Expert Leadership</h3>
+                                <p class="text-gray-600">Proven expertise delivering complex IT projects across education, business, and enterprise sectors</p>
+                            </div>
+                        </div>
+
+                        <!-- Proven Results -->
+                        <div class="flex items-start gap-4">
+                            <div class="feature-icon bg-blue-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                    <path d="M4 22h16"/>
+                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Proven Results</h3>
+                                <p class="text-gray-600">Track record of successful project delivery from startups to established organizations</p>
+                            </div>
+                        </div>
+
+                        <!-- Practical Solutions -->
+                        <div class="flex items-start gap-4">
+                            <div class="feature-icon bg-blue-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Practical Solutions</h3>
+                                <p class="text-gray-600">Problem-solvers who deliver technology that adapts to your unique business needs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image - Coderra Web Image -->
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-xl">
+                        <img src="assets/img/coderraWebImage.png" alt="Coderra.je - Jersey Technology Solutions" class="w-full h-full object-contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work -->
+    <section id="work" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services and Outcomes</h2>
+                <p class="text-xl text-gray-600">Delivering excellence across technology and education</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- IT Consultancy -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+                    <div class="feature-icon bg-blue-100 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">IT Consultancy</h3>
+                    <p class="text-gray-600">Strategic guidance and technical expertise across education, retail, hospitality, and enterprise sectors.</p>
+                </div>
+
+                <!-- E-Commerce -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+                    <div class="feature-icon bg-purple-100 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600">
+                            <path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">E-Commerce</h3>
+                    <p class="text-gray-600">Secure, scalable online stores with seamless payment integration and management.</p>
+                </div>
+
+                <!-- AI Solutions -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+                    <div class="feature-icon bg-teal-100 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">AI Solutions</h3>
+                    <p class="text-gray-600">Responsible AI implementation for classrooms and offices, making everyday tasks more efficient and workflows more productive.</p>
+                </div>
+
+                <!-- Education -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+                    <div class="feature-icon bg-orange-100 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-600">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Education</h3>
+                    <p class="text-gray-600">Hands-on programming and robotics workshops using interactive robots to teach computational thinking at all key stages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid / Our Solutions -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Solutions</h2>
+                <p class="text-xl text-gray-600">Comprehensive technology services tailored to your needs</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- AI in the Workplace -->
+                <div class="service-card bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl p-8 text-white relative overflow-hidden">
+                    <div class="icon-box bg-white/20 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="m12 2-2 2"/>
+                            <path d="m12 2 2 2"/>
+                            <path d="M12 15v5"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI in the Workplace</h3>
+                    <p class="text-blue-100 mb-6">
+                        Intelligent automation and data-driven insights that transform workflow efficiency, streamline operations, and enhance decision-making across your organization.
+                    </p>
+                    <a href="web-development.html" class="inline-flex items-center text-white font-semibold hover:gap-3 transition-all">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- E-Commerce Development -->
+                <div class="service-card bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 text-white relative overflow-hidden">
+                    <div class="icon-box bg-white/20 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">E-Commerce Development</h3>
+                    <p class="text-pink-100 mb-6">
+                        Beautiful, secure online stores with streamlined checkout experiences and powerful management tools.
+                    </p>
+                    <a href="ecommerce-development.html" class="inline-flex items-center text-white font-semibold hover:gap-3 transition-all">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- IoT Solutions -->
+                <div class="service-card bg-gradient-to-br from-teal-500 to-green-500 rounded-3xl p-8 text-white relative overflow-hidden">
+                    <div class="icon-box bg-white/20 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                            <path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">IoT Solutions</h3>
+                    <p class="text-teal-100 mb-6">
+                        Connected devices and smart systems that bridge digital innovation with real-world applications.
+                    </p>
+                    <a href="iot-solutions.html" class="inline-flex items-center text-white font-semibold hover:gap-3 transition-all">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Education & Robotics -->
+                <div class="service-card bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-8 text-white relative overflow-hidden">
+                    <div class="icon-box bg-white/20 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="10" x="3" y="11" rx="2"/><circle cx="12" cy="5" r="2"/>
+                            <path d="M12 7v4"/><line x1="8" x2="8" y1="16" y2="16"/><line x1="16" x2="16" y1="16" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Education & Robotics</h3>
+                    <p class="text-orange-100 mb-6">
+                        Curriculum-aligned programming and robotics workshops using interactive robots to bring computer science and computational thinking to life for learners of all ages.
+                    </p>
+                    <a href="education-robotics.html" class="inline-flex items-center text-white font-semibold hover:gap-3 transition-all">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Your Project / Contact -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Start Your Project</h2>
+                <p class="text-xl text-gray-600">Let's discuss how we can help transform your digital presence</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Left: Contact Info -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Get In Touch</h3>
+                    <p class="text-gray-600 mb-8">
+                        We're here to help bring your ideas to life. Reach out and let's create something amazing together.
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- Email -->
+                        <div class="flex items-center gap-4">
+                            <div class="feature-icon bg-blue-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email</h4>
+                                <a href="mailto:admin@coderra.je" class="text-blue-600 hover:underline">admin@coderra.je</a>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-4">
+                            <div class="feature-icon bg-blue-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-gray-900 flex items-center gap-2">
+                                    Location
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64 64" fill="none" class="text-amber-700">
+                                        <!-- Jersey Cow Icon -->
+                                        <ellipse cx="32" cy="38" rx="18" ry="12" fill="#8B4513" stroke="currentColor" stroke-width="2"/>
+                                        <ellipse cx="32" cy="30" rx="14" ry="10" fill="#D2691E"/>
+                                        <circle cx="32" cy="22" r="8" fill="#8B4513" stroke="currentColor" stroke-width="1.5"/>
+                                        <circle cx="28" cy="21" r="1.5" fill="white"/>
+                                        <circle cx="36" cy="21" r="1.5" fill="white"/>
+                                        <ellipse cx="32" cy="25" rx="3" ry="2" fill="#D2691E"/>
+                                        <path d="M24 16 L20 12 M40 16 L44 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <rect x="26" y="48" width="3" height="8" rx="1" fill="#8B4513"/>
+                                        <rect x="35" y="48" width="3" height="8" rx="1" fill="#8B4513"/>
+                                        <circle cx="38" cy="32" r="2" fill="#F4E4C1"/>
+                                        <circle cx="42" cy="36" r="2" fill="#F4E4C1"/>
+                                        <circle cx="26" cy="34" r="2" fill="#F4E4C1"/>
+                                    </svg>
+                                </h4>
+                                <p class="text-gray-600">Jersey, Channel Islands</p>
+                            </div>
+                        </div>
+
+                        <!-- Response Time -->
+                        <div class="flex items-center gap-4">
+                            <div class="feature-icon bg-blue-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Response Time</h4>
+                                <p class="text-gray-600">Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Logo -->
+                <div class="flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl shadow-lg p-12">
+                    <img src="assets/img/coderraLogo.png" alt="Coderra.je Logo" class="w-full max-w-md object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <div class="flex items-center justify-center gap-6">
+        <!-- Logo -->
+        <img src="assets/img/coderraLogo.png" alt="Coderra.je Logo" class="h-24 md:h-32">
+
+        <!-- Text stacked beside the logo -->
+        <div class="text-left">
+          <p class="text-gray-400 mb-2">
+            Innovative IT Solutions for Jersey
+          </p>
+          <p class="text-gray-500 text-sm">
+            © 2025 Coderra.je. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

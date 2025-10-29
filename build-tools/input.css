@@ -40,21 +40,36 @@
   /* Feature card with hover effect */
   .feature-card {
     @apply relative p-8 rounded-2xl bg-white border border-gray-100;
-    @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-2;
+    @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-3;
     @apply cursor-pointer overflow-hidden;
+    @apply shadow-lg;
   }
 
   .feature-card::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent;
+    @apply absolute inset-0 bg-gradient-to-br from-primary-500/10 to-accent-purple/5;
     @apply opacity-0 group-hover:opacity-100 transition-opacity duration-500;
   }
 
-  /* Service tile with gradient */
+  .feature-card::after {
+    content: '';
+    @apply absolute -inset-1 bg-gradient-to-r from-primary-500 to-accent-purple;
+    @apply opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500;
+    z-index: -1;
+  }
+
+  /* Service tile with gradient - Enhanced */
   .service-tile {
     @apply relative p-10 rounded-3xl overflow-hidden;
-    @apply transition-all duration-500 hover:scale-[1.02];
-    @apply shadow-xl hover:shadow-2xl;
+    @apply transition-all duration-500 hover:scale-[1.03];
+    @apply shadow-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)];
+    @apply hover:-translate-y-1;
+  }
+
+  .service-tile::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-white/0 to-white/10;
+    @apply opacity-0 group-hover:opacity-100 transition-opacity duration-500;
   }
 
   /* Section header */
@@ -110,12 +125,14 @@
     @apply opacity-100 translate-y-0;
   }
 
-  /* Icon wrapper with gradient background */
+  /* Icon wrapper with gradient background - Enhanced */
   .icon-wrapper {
     @apply w-16 h-16 rounded-2xl flex items-center justify-center;
     @apply bg-gradient-to-br from-primary-500/10 to-primary-600/5;
     @apply group-hover:from-primary-500/20 group-hover:to-primary-600/10;
     @apply transition-all duration-300;
+    @apply group-hover:scale-110 group-hover:rotate-3;
+    @apply group-hover:shadow-lg;
   }
 }
 
