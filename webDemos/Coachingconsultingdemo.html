@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elevate Coaching & Consulting - Transform Your Potential</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @layer base {
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+    }
+    
+    /* Custom color palette - Professional blues and golds */
+    :root {
+      --navy: #1e3a8a;
+      --royal-blue: #2563eb;
+      --gold: #f59e0b;
+      --light-blue: #dbeafe;
+      --cream: #fffbeb;
+    }
+    
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Sophisticated animations */
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .slide-up {
+      animation: slideUp 0.8s ease-out;
+    }
+    
+    @keyframes shimmer {
+      0% {
+        background-position: -1000px 0;
+      }
+      100% {
+        background-position: 1000px 0;
+      }
+    }
+    
+    .shimmer {
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      background-size: 1000px 100%;
+      animation: shimmer 2s infinite;
+    }
+    
+    /* Blog card styles */
+    .blog-card {
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    }
+    
+    .blog-card img {
+      transition: transform 0.4s ease;
+    }
+    
+    .blog-card:hover img {
+      transform: scale(1.1);
+    }
+    
+    /* Resource card styles */
+    .resource-card {
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+    
+    .resource-card:hover {
+      border-left-color: #f59e0b;
+      transform: translateX(8px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Portrait styling */
+    .executive-portrait {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .executive-portrait::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+    }
+    
+    /* Gradient backgrounds */
+    .gradient-navy {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    }
+    
+    .gradient-gold {
+      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+    }
+    
+    /* Badge styles */
+    .category-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    /* Reading time indicator */
+    .reading-time {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body class="antialiased bg-gray-50">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex-shrink-0">
+          <h1 class="text-3xl font-bold text-blue-900">Elevate</h1>
+          <p class="text-xs text-gray-600 tracking-wider">COACHING & CONSULTING</p>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">About</a>
+          <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</a>
+          <a href="#blog" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Blog</a>
+          <a href="#resources" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Resources</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</a>
+        </div>
+        <a href="#contact" class="hidden md:block px-6 py-2 gradient-gold text-white font-semibold rounded-lg hover:opacity-90 transition-all">
+          Book Consultation
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-24 gradient-navy text-white relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="slide-up">
+          <div class="inline-block px-4 py-2 bg-yellow-400/20 backdrop-blur-sm rounded-full text-yellow-300 font-semibold text-sm mb-6">
+            <i class="fas fa-award mr-2"></i>Award-Winning Executive Coach
+          </div>
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Transform Your Leadership</h1>
+          <p class="text-xl md:text-2xl text-blue-100 leading-relaxed mb-8">
+            Strategic coaching and consulting for executives, entrepreneurs, and high-performers ready to reach their next level
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="inline-block px-8 py-4 gradient-gold text-white font-semibold rounded-lg hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105 text-center">
+              <i class="fas fa-calendar-check mr-2"></i>Schedule Free Consultation
+            </a>
+            <a href="#resources" class="inline-block px-8 py-4 bg-white text-blue-900 font-semibold rounded-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl hover:scale-105 text-center">
+              <i class="fas fa-download mr-2"></i>Free Resources
+            </a>
+          </div>
+          
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 mt-12">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-yellow-400">500+</div>
+              <div class="text-sm text-blue-200">Clients Coached</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-yellow-400">20+</div>
+              <div class="text-sm text-blue-200">Years Experience</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-yellow-400">98%</div>
+              <div class="text-sm text-blue-200">Success Rate</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hero Image -->
+        <div class="slide-up lg:block">
+          <div class="relative">
+            <div class="absolute inset-0 gradient-gold opacity-20 rounded-3xl blur-2xl"></div>
+            <img 
+              src="https://randomuser.me/api/portraits/men/43.jpg" 
+              alt="Marcus Chen - Executive Coach" 
+              class="relative w-full max-w-md mx-auto rounded-3xl shadow-2xl border-8 border-white/20">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Portrait -->
+        <div class="slide-up">
+          <div class="executive-portrait relative rounded-3xl overflow-hidden shadow-2xl">
+            <img 
+              src="https://randomuser.me/api/portraits/men/43.jpg" 
+              alt="Marcus Chen - Executive Coach" 
+              class="w-full">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900 to-transparent p-8">
+              <h3 class="text-3xl font-bold text-white mb-2">Marcus Chen</h3>
+              <p class="text-blue-200">MBA, PCC, Strategic Leadership Coach</p>
+            </div>
+          </div>
+          
+          <!-- Credentials -->
+          <div class="grid grid-cols-2 gap-4 mt-6">
+            <div class="bg-blue-50 p-4 rounded-xl border-l-4 border-blue-600">
+              <i class="fas fa-university text-2xl text-blue-600 mb-2"></i>
+              <div class="font-semibold text-gray-900">MBA</div>
+              <div class="text-sm text-gray-600">Harvard Business School</div>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-xl border-l-4 border-yellow-500">
+              <i class="fas fa-certificate text-2xl text-yellow-600 mb-2"></i>
+              <div class="font-semibold text-gray-900">PCC Certified</div>
+              <div class="text-sm text-gray-600">ICF Accredited</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Content -->
+        <div class="slide-up">
+          <div class="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-semibold text-sm mb-4">
+            <i class="fas fa-user-tie mr-2"></i>About Marcus
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Empowering Leaders to Excel</h2>
+          
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            I'm Marcus Chen, and for over two decades, I've had the privilege of working alongside some of the world's most ambitious leaders, helping them break through barriers and achieve extraordinary results.
+          </p>
+          
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            My journey began in the corporate world, where I spent 15 years in executive leadership roles at Fortune 500 companies. This experience gave me firsthand insight into the challenges leaders face—from navigating organizational change to building high-performing teams and making strategic decisions under pressure.
+          </p>
+          
+          <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            Today, I combine my business acumen with proven coaching methodologies to help executives, entrepreneurs, and professionals unlock their full potential. My approach is practical, results-oriented, and tailored to your unique goals and challenges.
+          </p>
+          
+          <div class="bg-gradient-to-r from-blue-50 to-yellow-50 p-6 rounded-xl border-l-4 border-yellow-500 mb-8">
+            <p class="text-lg font-semibold text-gray-900 mb-2">
+              <i class="fas fa-quote-left text-yellow-500 mr-2"></i>
+              "Success isn't about working harder—it's about thinking smarter, leading boldly, and staying true to your vision."
+            </p>
+            <p class="text-sm text-gray-600">— Marcus Chen</p>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+              <i class="fas fa-check-circle mr-1"></i>Leadership Development
+            </span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+              <i class="fas fa-check-circle mr-1"></i>Executive Coaching
+            </span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+              <i class="fas fa-check-circle mr-1"></i>Strategic Planning
+            </span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+              <i class="fas fa-check-circle mr-1"></i>Team Building
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-semibold text-sm mb-4">
+          <i class="fas fa-briefcase mr-2"></i>Services
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How I Can Help You Succeed</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Customized coaching and consulting solutions designed to accelerate your growth
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 gradient-navy rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-user-tie text-3xl text-white"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Executive Coaching</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            One-on-one coaching for C-suite executives and senior leaders to enhance decision-making, strategic thinking, and leadership presence.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+              <span>Leadership effectiveness</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+              <span>Strategic decision-making</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+              <span>Executive presence</span>
+            </li>
+          </ul>
+          <div class="border-t pt-4">
+            <div class="text-2xl font-bold text-blue-600">£250/hour</div>
+            <div class="text-sm text-gray-600">6-month programmes available</div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 gradient-gold rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-rocket text-3xl text-white"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Business Consulting</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Strategic consulting for businesses looking to scale, optimize operations, or navigate complex organizational challenges.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-yellow-600 mr-2 mt-1"></i>
+              <span>Growth strategy</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-yellow-600 mr-2 mt-1"></i>
+              <span>Organizational design</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-yellow-600 mr-2 mt-1"></i>
+              <span>Change management</span>
+            </li>
+          </ul>
+          <div class="border-t pt-4">
+            <div class="text-2xl font-bold text-yellow-600">Custom Pricing</div>
+            <div class="text-sm text-gray-600">Project-based engagements</div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-users text-3xl text-white"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Team Development</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Build high-performing teams through workshops, retreats, and ongoing development programs that foster collaboration and results.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+              <span>Team dynamics workshops</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+              <span>Leadership retreats</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+              <span>Performance optimization</span>
+            </li>
+          </ul>
+          <div class="border-t pt-4">
+            <div class="text-2xl font-bold text-green-600">£3,500/day</div>
+            <div class="text-sm text-gray-600">Full-day workshops</div>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-chart-line text-3xl text-white"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Career Transition</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Navigate career changes, promotions, or entrepreneurial ventures with confidence through personalized coaching and strategy.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-purple-600 mr-2 mt-1"></i>
+              <span>Career strategy planning</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-purple-600 mr-2 mt-1"></i>
+              <span>Personal branding</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-purple-600 mr-2 mt-1"></i>
+              <span>Interview preparation</span>
+            </li>
+          </ul>
+          <div class="border-t pt-4">
+            <div class="text-2xl font-bold text-purple-600">£180/hour</div>
+            <div class="text-sm text-gray-600">3-month packages available</div>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-bullseye text-3xl text-white"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Strategic Planning</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Develop clear, actionable strategies to achieve your business objectives and maintain competitive advantage in your market.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-red-600 mr-2 mt-1"></i>
+              <span>Vision & mission development</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-red-600 mr-2 mt-1"></i>
+              <span>Goal setting frameworks</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-red-600 mr-2 mt-1"></i>
+              <span>Implementation roadmaps</span>
+            </li>
+          </ul>
+          <div class="border-t pt-4">
+            <div class="text-2xl font-bold text-red-600">£5,000+</div>
+            <div class="text-sm text-gray-600">Strategic planning sessions</div>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-microphone text-3xl text-white"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Speaking & Workshops</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Engaging keynote speeches and interactive workshops on leadership, performance, and organizational excellence.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-indigo-600 mr-2 mt-1"></i>
+              <span>Keynote presentations</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-indigo-600 mr-2 mt-1"></i>
+              <span>Conference speaking</span>
+            </li>
+            <li class="flex items-start text-sm text-gray-700">
+              <i class="fas fa-check text-indigo-600 mr-2 mt-1"></i>
+              <span>Custom workshops</span>
+            </li>
+          </ul>
+          <div class="border-t pt-4">
+            <div class="text-2xl font-bold text-indigo-600">£2,500+</div>
+            <div class="text-sm text-gray-600">Per engagement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-semibold text-sm mb-4">
+          <i class="fas fa-book-open mr-2"></i>Latest Insights
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Leadership Blog</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Practical insights, strategies, and inspiration for modern leaders
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Blog Post 1 -->
+        <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div class="overflow-hidden h-56">
+            <img 
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800" 
+              alt="Team collaboration" 
+              class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="category-badge bg-blue-100 text-blue-700">Leadership</span>
+              <div class="reading-time">
+                <i class="far fa-clock"></i>
+                <span>8 min read</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+              <a href="#">5 Essential Traits of Transformational Leaders</a>
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Discover the key characteristics that separate good leaders from truly transformational ones and how to cultivate these traits...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Marcus Chen" class="w-8 h-8 rounded-full">
+                <div class="text-sm">
+                  <div class="font-semibold text-gray-900">Marcus Chen</div>
+                  <div class="text-gray-500">Nov 1, 2025</div>
+                </div>
+              </div>
+              <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Read More <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div class="overflow-hidden h-56">
+            <img 
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800" 
+              alt="Strategic planning" 
+              class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="category-badge bg-yellow-100 text-yellow-700">Strategy</span>
+              <div class="reading-time">
+                <i class="far fa-clock"></i>
+                <span>10 min read</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+              <a href="#">Strategic Planning in Uncertain Times</a>
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Learn how to create robust strategic plans that account for volatility while keeping your organization focused and agile...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Marcus Chen" class="w-8 h-8 rounded-full">
+                <div class="text-sm">
+                  <div class="font-semibold text-gray-900">Marcus Chen</div>
+                  <div class="text-gray-500">Oct 28, 2025</div>
+                </div>
+              </div>
+              <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Read More <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div class="overflow-hidden h-56">
+            <img 
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" 
+              alt="Team building" 
+              class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="category-badge bg-green-100 text-green-700">Team Building</span>
+              <div class="reading-time">
+                <i class="far fa-clock"></i>
+                <span>6 min read</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+              <a href="#">Building High-Performance Teams Remotely</a>
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Practical strategies for creating cohesive, productive teams in today's hybrid and remote work environments...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Marcus Chen" class="w-8 h-8 rounded-full">
+                <div class="text-sm">
+                  <div class="font-semibold text-gray-900">Marcus Chen</div>
+                  <div class="text-gray-500">Oct 25, 2025</div>
+                </div>
+              </div>
+              <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Read More <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 4 -->
+        <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div class="overflow-hidden h-56">
+            <img 
+              src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800" 
+              alt="Executive mindset" 
+              class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="category-badge bg-purple-100 text-purple-700">Mindset</span>
+              <div class="reading-time">
+                <i class="far fa-clock"></i>
+                <span>7 min read</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+              <a href="#">The Growth Mindset for Executive Success</a>
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Why embracing a growth mindset is crucial for executive success and how to develop this powerful perspective...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Marcus Chen" class="w-8 h-8 rounded-full">
+                <div class="text-sm">
+                  <div class="font-semibold text-gray-900">Marcus Chen</div>
+                  <div class="text-gray-500">Oct 22, 2025</div>
+                </div>
+              </div>
+              <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Read More <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 5 -->
+        <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div class="overflow-hidden h-56">
+            <img 
+              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800" 
+              alt="Communication skills" 
+              class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="category-badge bg-red-100 text-red-700">Communication</span>
+              <div class="reading-time">
+                <i class="far fa-clock"></i>
+                <span>9 min read</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+              <a href="#">Mastering Executive Communication</a>
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Learn the communication strategies that top executives use to inspire, influence, and drive organizational change...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Marcus Chen" class="w-8 h-8 rounded-full">
+                <div class="text-sm">
+                  <div class="font-semibold text-gray-900">Marcus Chen</div>
+                  <div class="text-gray-500">Oct 18, 2025</div>
+                </div>
+              </div>
+              <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Read More <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 6 -->
+        <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div class="overflow-hidden h-56">
+            <img 
+              src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800" 
+              alt="Decision making" 
+              class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="category-badge bg-indigo-100 text-indigo-700">Decision Making</span>
+              <div class="reading-time">
+                <i class="far fa-clock"></i>
+                <span>11 min read</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+              <a href="#">Data-Driven Decision Making for Leaders</a>
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              How to balance data analytics with intuition and experience to make better strategic decisions faster...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Marcus Chen" class="w-8 h-8 rounded-full">
+                <div class="text-sm">
+                  <div class="font-semibold text-gray-900">Marcus Chen</div>
+                  <div class="text-gray-500">Oct 15, 2025</div>
+                </div>
+              </div>
+              <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Read More <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- View All Blog Posts -->
+      <div class="text-center mt-12">
+        <a href="#" class="inline-block px-8 py-4 gradient-navy text-white font-semibold rounded-lg hover:opacity-90 transition-all shadow-lg">
+          <i class="fas fa-th-large mr-2"></i>View All Blog Posts
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="py-24 bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 bg-yellow-100 rounded-full text-yellow-700 font-semibold text-sm mb-4">
+          <i class="fas fa-gift mr-2"></i>Free Resources
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Accelerate Your Growth</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Download our free guides, templates, and tools to start transforming your leadership today
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <!-- Resource 1 -->
+        <div class="resource-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="flex gap-6">
+            <div class="w-16 h-16 gradient-navy rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <i class="fas fa-file-pdf text-3xl text-white"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Leadership Assessment Tool</h3>
+              <p class="text-gray-600 mb-4">
+                Comprehensive 25-question assessment to identify your leadership strengths and areas for development.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">
+                  <i class="fas fa-file-alt mr-1"></i>PDF • 15 pages
+                </span>
+                <button class="px-6 py-2 gradient-gold text-white font-semibold rounded-lg hover:opacity-90 transition-all">
+                  <i class="fas fa-download mr-2"></i>Download
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resource 2 -->
+        <div class="resource-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="flex gap-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <i class="fas fa-chart-line text-3xl text-white"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Strategic Planning Template</h3>
+              <p class="text-gray-600 mb-4">
+                Step-by-step strategic planning framework used by Fortune 500 companies to achieve their goals.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">
+                  <i class="fas fa-file-excel mr-1"></i>Excel • Editable
+                </span>
+                <button class="px-6 py-2 gradient-gold text-white font-semibold rounded-lg hover:opacity-90 transition-all">
+                  <i class="fas fa-download mr-2"></i>Download
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resource 3 -->
+        <div class="resource-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="flex gap-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <i class="fas fa-book text-3xl text-white"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Executive Presence Guide</h3>
+              <p class="text-gray-600 mb-4">
+                Master the art of executive presence with this comprehensive guide covering communication, body language, and influence.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">
+                  <i class="fas fa-file-pdf mr-1"></i>PDF • 32 pages
+                </span>
+                <button class="px-6 py-2 gradient-gold text-white font-semibold rounded-lg hover:opacity-90 transition-all">
+                  <i class="fas fa-download mr-2"></i>Download
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resource 4 -->
+        <div class="resource-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="flex gap-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <i class="fas fa-users text-3xl text-white"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Team Performance Toolkit</h3>
+              <p class="text-gray-600 mb-4">
+                Complete toolkit for assessing and improving team dynamics, including surveys, worksheets, and action plans.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">
+                  <i class="fas fa-folder mr-1"></i>ZIP • Multiple files
+                </span>
+                <button class="px-6 py-2 gradient-gold text-white font-semibold rounded-lg hover:opacity-90 transition-all">
+                  <i class="fas fa-download mr-2"></i>Download
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resource 5 -->
+        <div class="resource-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="flex gap-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <i class="fas fa-lightbulb text-3xl text-white"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Decision-Making Framework</h3>
+              <p class="text-gray-600 mb-4">
+                Proven framework for making better decisions faster, including templates and real-world case studies.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">
+                  <i class="fas fa-file-pdf mr-1"></i>PDF • 22 pages
+                </span>
+                <button class="px-6 py-2 gradient-gold text-white font-semibold rounded-lg hover:opacity-90 transition-all">
+                  <i class="fas fa-download mr-2"></i>Download
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resource 6 -->
+        <div class="resource-card bg-white rounded-2xl p-8 shadow-lg">
+          <div class="flex gap-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <i class="fas fa-calendar-check text-3xl text-white"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">90-Day Leadership Plan</h3>
+              <p class="text-gray-600 mb-4">
+                Actionable 90-day plan template for new leaders or executives transitioning to a new role.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">
+                  <i class="fas fa-file-word mr-1"></i>Word • Editable
+                </span>
+                <button class="px-6 py-2 gradient-gold text-white font-semibold rounded-lg hover:opacity-90 transition-all">
+                  <i class="fas fa-download mr-2"></i>Download
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="max-w-3xl mx-auto mt-16">
+        <div class="gradient-navy rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl">
+          <i class="fas fa-envelope-open-text text-5xl mb-6 text-yellow-400"></i>
+          <h3 class="text-3xl font-bold mb-4">Get Weekly Leadership Insights</h3>
+          <p class="text-blue-100 mb-8 text-lg">
+            Join 5,000+ leaders receiving actionable strategies, tools, and inspiration delivered to their inbox every Monday.
+          </p>
+          <form class="flex flex-col sm:flex-row gap-4">
+            <input 
+              type="email" 
+              placeholder="Enter your email address" 
+              class="flex-1 px-6 py-4 rounded-lg text-gray-900 focus:ring-4 focus:ring-yellow-400 outline-none">
+            <button 
+              type="submit" 
+              class="px-8 py-4 gradient-gold text-white font-semibold rounded-lg hover:opacity-90 transition-all shadow-lg whitespace-nowrap">
+              <i class="fas fa-paper-plane mr-2"></i>Subscribe Now
+            </button>
+          </form>
+          <p class="text-blue-200 text-sm mt-4">
+            <i class="fas fa-lock mr-1"></i>No spam. Unsubscribe anytime.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-semibold text-sm mb-4">
+          <i class="fas fa-phone-alt mr-2"></i>Get in Touch
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Let's Start Your Journey</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Schedule a free 30-minute consultation to discuss your goals and how we can help you achieve them
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <!-- Contact Form -->
+        <div class="bg-gray-50 rounded-3xl p-8 md:p-12 shadow-xl">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Book Your Free Consultation</h3>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="fname" class="block text-sm font-semibold text-gray-900 mb-2">First Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  required
+                  class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+              </div>
+              <div>
+                <label for="lname" class="block text-sm font-semibold text-gray-900 mb-2">Last Name</label>
+                <input
+                  type="text"
+                  id="lname"
+                  required
+                  class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                required
+                class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-gray-900 mb-2">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+            </div>
+
+            <div>
+              <label for="service-interest" class="block text-sm font-semibold text-gray-900 mb-2">Service Interest</label>
+              <select
+                id="service-interest"
+                required
+                class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                <option value="">Select a service</option>
+                <option value="executive">Executive Coaching</option>
+                <option value="business">Business Consulting</option>
+                <option value="team">Team Development</option>
+                <option value="career">Career Transition</option>
+                <option value="strategic">Strategic Planning</option>
+                <option value="speaking">Speaking & Workshops</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-semibold text-gray-900 mb-2">Tell me about your goals</label>
+              <textarea
+                id="message"
+                rows="4"
+                class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all resize-none"></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full px-8 py-4 gradient-navy text-white font-bold text-lg rounded-xl hover:opacity-90 transition-all shadow-lg hover:shadow-xl">
+              <i class="fas fa-calendar-check mr-2"></i>Schedule Free Consultation
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="w-14 h-14 gradient-navy rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-lg">Office Location</h4>
+                <p class="text-gray-700">
+                  The Business Centre<br>
+                  32 Castle Street<br>
+                  St Helier, Jersey JE2 3RT
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="w-14 h-14 gradient-navy rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <i class="fas fa-phone text-2xl text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-lg">Phone</h4>
+                <p class="text-gray-700 mb-1">+44 1534 890 123</p>
+                <p class="text-sm text-gray-600">Mon-Fri: 9am - 6pm GMT</p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="w-14 h-14 gradient-navy rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <i class="fas fa-envelope text-2xl text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-lg">Email</h4>
+                <p class="text-gray-700 mb-1">marcus@elevatecoaching.je</p>
+                <p class="text-sm text-gray-600">Response within 24 hours</p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="w-14 h-14 gradient-gold rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <i class="fas fa-video text-2xl text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-lg">Virtual Sessions</h4>
+                <p class="text-gray-700">
+                  Available worldwide via Zoom, Teams, or your preferred platform
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="mt-12">
+            <h4 class="font-bold text-gray-900 mb-4 text-lg">Connect With Me</h4>
+            <div class="flex gap-4">
+              <a href="#" class="w-12 h-12 gradient-navy rounded-lg flex items-center justify-center hover:scale-110 transition-all shadow-lg">
+                <i class="fab fa-linkedin-in text-white text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 gradient-navy rounded-lg flex items-center justify-center hover:scale-110 transition-all shadow-lg">
+                <i class="fab fa-twitter text-white text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 gradient-navy rounded-lg flex items-center justify-center hover:scale-110 transition-all shadow-lg">
+                <i class="fab fa-youtube text-white text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 gradient-navy rounded-lg flex items-center justify-center hover:scale-110 transition-all shadow-lg">
+                <i class="fab fa-instagram text-white text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="mt-12 bg-blue-50 rounded-2xl p-6 border-2 border-blue-200">
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <i class="fas fa-certificate text-3xl text-blue-600 mb-2"></i>
+                <div class="font-bold text-gray-900 text-sm">ICF Certified</div>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-graduation-cap text-3xl text-blue-600 mb-2"></i>
+                <div class="font-bold text-gray-900 text-sm">MBA Harvard</div>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-award text-3xl text-yellow-600 mb-2"></i>
+                <div class="font-bold text-gray-900 text-sm">Top Coach 2024</div>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-users text-3xl text-blue-600 mb-2"></i>
+                <div class="font-bold text-gray-900 text-sm">500+ Clients</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <!-- About -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Elevate</h3>
+          <p class="text-gray-400 leading-relaxed text-sm">
+            Transforming leaders and organizations through strategic coaching, consulting, and development programs.
+          </p>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Executive Coaching</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Business Consulting</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Team Development</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Strategic Planning</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#resources" class="text-gray-400 hover:text-white transition-colors">Free Downloads</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><i class="fas fa-phone mr-2"></i>+44 1534 890 123</li>
+            <li><i class="fas fa-envelope mr-2"></i>marcus@elevatecoaching.je</li>
+            <li><i class="fas fa-map-marker-alt mr-2"></i>St Helier, Jersey</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="text-gray-400 text-sm">
+          © 2025 Elevate Coaching & Consulting. All rights reserved. | 
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Form submission
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your interest! We\'ll be in touch within 24 hours to schedule your free consultation.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

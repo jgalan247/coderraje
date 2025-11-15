@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Website Design | Coderra</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="assets/img/coderra-favicon.svg">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome with fallback -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* Custom configuration for Tailwind */
+    @layer base {
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    }
+    
+    /* Ensure icons are visible */
+    .fa, .fas, .far, .fal, .fab {
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+    }
+    
+    /* Fix for missing height classes */
+    .h-24 { height: 6rem; }
+    @media (min-width: 768px) {
+      .md\:h-32 { height: 8rem; }
+    }
+    
+    /* Animation for decorative elements */
+    @keyframes pulse-slow {
+      0%, 100% {
+        opacity: 0.2;
+      }
+      50% {
+        opacity: 0.3;
+      }
+    }
+    
+    .animate-pulse-slow {
+      animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    /* Ensure text contrast on gradient backgrounds */
+    .text-shadow {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Icon fallback - show emoji if Font Awesome fails */
+    .icon-fallback::before {
+      content: attr(data-emoji);
+      font-size: 1.5em;
+    }
+    
+    .icon-fallback i {
+      font-size: 0;
+    }
+    
+    /* Ensure proper loading of Font Awesome */
+    i[class*="fa-"]::before {
+      font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "FontAwesome";
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body class="antialiased bg-gray-50">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="text-2xl font-bold text-gray-900">Coderra</a>
+        </div>
+        <div class="flex space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-emerald-600 transition-colors font-medium">
+            <i class="fas fa-arrow-left mr-2"></i>Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-24 bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-700 text-white relative overflow-hidden" style="min-height: 500px;">
+    <!-- Decorative circles for depth -->
+    <div class="absolute top-20 left-10 w-72 h-72 bg-emerald-600/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-teal-600/20 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl">
+        <i class="fas fa-globe text-5xl text-white"></i>
+      </div>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg text-shadow">Professional Website Design</h1>
+      <p class="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed text-shadow">
+        Elegant, professional websites for professionals and traders to showcase their services
+      </p>
+      <div class="mt-8">
+        <a href="#contact-form" class="inline-block px-8 py-4 bg-white text-emerald-900 font-bold rounded-xl hover:bg-emerald-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+          Get Your Website Today
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-emerald-100">
+        <div class="flex items-center justify-center mb-6">
+          <div class="h-1 w-20 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"></div>
+        </div>
+        <h2 class="text-4xl font-bold text-gray-900 mb-6 text-center">Your Online Presence, Professionally Crafted</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Whether you're a yoga instructor, therapist, consultant, or trader, your website is your digital storefront. At Coderra, we create stunning, professional websites that help you reach more clients, showcase your expertise, and grow your business.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          We also specialize in online CV/portfolio websites tailored to increase your exposure and open doors to new job opportunities. Stand out from the crowd with a personalized online presence that showcases your skills and achievements.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-block">
+          <h3 class="text-3xl font-bold text-gray-900 mb-2">Who We Serve</h3>
+          <div class="h-1 w-full bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-400 rounded-full"></div>
+        </div>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Perfect for professionals, entrepreneurs, and job seekers</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Professionals -->
+        <div class="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-emerald-500">
+          <div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <i class="fas fa-user-md text-3xl text-white"></i>
+          </div>
+          <h5 class="text-xl font-bold text-gray-900 mb-3">Professionals</h5>
+          <p class="text-gray-600 leading-relaxed">
+            Yoga instructors, therapists, counselors, coaches, and consultants looking to establish their online presence.
+          </p>
+        </div>
+
+        <!-- Traders & Services -->
+        <div class="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-teal-500">
+          <div class="w-20 h-20 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <i class="fas fa-tools text-3xl text-white"></i>
+          </div>
+          <h5 class="text-xl font-bold text-gray-900 mb-3">Traders & Services</h5>
+          <p class="text-gray-600 leading-relaxed">
+            Local businesses and service providers who want to advertise their services and attract new customers.
+          </p>
+        </div>
+
+        <!-- Job Seekers -->
+        <div class="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-emerald-600">
+          <div class="w-20 h-20 bg-gradient-to-br from-emerald-600 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <i class="fas fa-id-card text-3xl text-white"></i>
+          </div>
+          <h5 class="text-xl font-bold text-gray-900 mb-3">Job Seekers</h5>
+          <p class="text-gray-600 leading-relaxed">
+            Professionals seeking to create an online CV/portfolio to enhance visibility and increase job opportunities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-24 bg-gradient-to-b from-white via-emerald-50/30 to-white relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <div class="inline-block">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <i class="fas fa-tag text-3xl text-white"></i>
+          </div>
+          <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Transparent Pricing</h3>
+          <div class="h-1 w-full bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-400 rounded-full mb-4"></div>
+        </div>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Simple, straightforward pricing based on your needs
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
+        <!-- Single Page Package -->
+        <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-gray-200 hover:border-teal-400 hover:-translate-y-1">
+          <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-file text-3xl text-teal-600"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-2">Single Page</h4>
+            <div class="text-5xl font-bold text-teal-600 mb-2">£180</div>
+            <p class="text-gray-600">Simple & effective</p>
+          </div>
+
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-teal-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700"><strong>1 page</strong> with all essential information</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-teal-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700">Responsive mobile-friendly design</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-teal-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700">Contact form with email notifications</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-teal-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700">Social media integration</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-teal-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700">Basic SEO optimization</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-times-circle text-gray-300 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-500">Hosting not included</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-times-circle text-gray-300 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-500">Domain registration not included</span>
+            </li>
+          </ul>
+
+          <div class="bg-teal-50 rounded-xl p-4 mb-6 border border-teal-200">
+            <p class="text-sm text-teal-800 font-medium text-center">
+              <i class="fas fa-clock mr-2"></i>3 business days delivery
+            </p>
+          </div>
+
+          <a href="#contact-form" class="block w-full text-center px-6 py-3 bg-teal-600 text-white font-bold rounded-lg hover:bg-teal-700 transition-all duration-300 shadow-md hover:shadow-lg">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Basic Package -->
+        <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-gray-200 hover:border-emerald-400 hover:-translate-y-1">
+          <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-laptop text-3xl text-emerald-600"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-2">Basic Website</h4>
+            <div class="text-5xl font-bold text-emerald-600 mb-2">£300</div>
+            <p class="text-gray-600">Perfect for getting started</p>
+          </div>
+
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-emerald-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700"><strong>5 pages</strong> (Home, About, Services, Gallery, Contact)</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-emerald-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700">Responsive mobile-friendly design</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-emerald-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700">Contact form with email notifications</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-emerald-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700">Social media integration</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-emerald-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700">Basic SEO optimization</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-emerald-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700">Image gallery/portfolio section</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-emerald-500 text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-gray-700">Google Maps integration</span>
+            </li>
+          </ul>
+
+          <div class="bg-emerald-50 rounded-xl p-4 mb-6 border border-emerald-200">
+            <p class="text-sm text-emerald-800 font-medium text-center">
+              <i class="fas fa-clock mr-2"></i>5 business days delivery
+            </p>
+          </div>
+
+          <a href="#contact-form" class="block w-full text-center px-6 py-3 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-md hover:shadow-lg">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Premium Package -->
+        <div class="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-emerald-400 hover:-translate-y-1 relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-yellow-400 text-emerald-900 px-4 py-1 rounded-bl-lg font-bold text-sm">
+            POPULAR
+          </div>
+
+          <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-crown text-3xl text-white"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-2">Premium Website</h4>
+            <div class="text-5xl font-bold text-white mb-2">£600</div>
+            <p class="text-emerald-100">Everything you need to succeed</p>
+          </div>
+
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-white text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-white"><strong>10+ pages</strong> (fully customizable structure)</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-white text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-white">Advanced responsive design with animations</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-white text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-white">Custom contact forms with validation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-white text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-white">Online booking/appointment system</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-white text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-white">Blog with content management</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-white text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-white">Advanced SEO & analytics setup</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-white text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-white">Newsletter/mailing list integration</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-white text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-white">E-commerce capabilities (optional)</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-white text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-white">Custom features tailored to your needs</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-white text-xl mr-3 mt-1 flex-shrink-0"></i>
+              <span class="text-white">Priority support & maintenance</span>
+            </li>
+          </ul>
+
+          <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 mb-6 border border-white/30">
+            <p class="text-sm text-white font-medium text-center">
+              <i class="fas fa-rocket mr-2"></i>7 business days delivery
+            </p>
+          </div>
+
+          <a href="#contact-form" class="block w-full text-center px-6 py-3 bg-white text-emerald-900 font-bold rounded-lg hover:bg-emerald-50 transition-all duration-300 shadow-md hover:shadow-lg">
+            Get Started
+          </a>
+        </div>
+      </div>
+
+      <!-- Additional Services -->
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+          <div class="text-center mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i class="fas fa-plus text-2xl text-white"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-2">Additional Services</h4>
+            <p class="text-gray-600">Enhance your website with these optional features</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <i class="fas fa-server text-emerald-600 text-xl mr-4 mt-1 flex-shrink-0"></i>
+              <div>
+                <h5 class="font-bold text-gray-900 mb-1">Web Hosting</h5>
+                <p class="text-sm text-gray-600 mb-2">Reliable hosting included in our packages</p>
+                <p class="text-emerald-600 font-bold">From £60/year</p>
+              </div>
+            </div>
+
+            <div class="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <i class="fas fa-globe text-emerald-600 text-xl mr-4 mt-1 flex-shrink-0"></i>
+              <div>
+                <h5 class="font-bold text-gray-900 mb-1">Domain Registration</h5>
+                <p class="text-sm text-gray-600 mb-2">Secure your perfect domain name</p>
+                <p class="text-emerald-600 font-bold">£12-£70/year</p>
+              </div>
+            </div>
+
+            <div class="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <i class="fas fa-wrench text-emerald-600 text-xl mr-4 mt-1 flex-shrink-0"></i>
+              <div>
+                <h5 class="font-bold text-gray-900 mb-1">Website Maintenance</h5>
+                <p class="text-sm text-gray-600 mb-2">Keep your site updated and secure</p>
+                <p class="text-emerald-600 font-bold">£60/hour</p>
+              </div>
+            </div>
+
+            <div class="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <i class="fas fa-chart-line text-emerald-600 text-xl mr-4 mt-1 flex-shrink-0"></i>
+              <div>
+                <h5 class="font-bold text-gray-900 mb-1">SEO & Marketing</h5>
+                <p class="text-sm text-gray-600 mb-2">Boost your online visibility</p>
+                <p class="text-emerald-600 font-bold">Custom quote</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Examples Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-block">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <i class="fas fa-palette text-3xl text-white"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">Website Templates</h3>
+          <div class="h-1 w-full bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-400 rounded-full mb-4"></div>
+        </div>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          These are just examples. Your website will be completely customized to match your brand, services, and style.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Template 1 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+            <i class="fas fa-spa text-6xl text-white"></i>
+          </div>
+          <div class="p-6">
+            <h5 class="text-xl font-bold text-gray-900 mb-2">Wellness & Therapy</h5>
+            <p class="text-gray-600 text-sm mb-4">Calming design for therapists, counselors, and wellness professionals</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Booking System</span>
+              <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-xs font-medium">Testimonials</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 2 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+            <i class="fas fa-hammer text-6xl text-white"></i>
+          </div>
+          <div class="p-6">
+            <h5 class="text-xl font-bold text-gray-900 mb-2">Trades & Services</h5>
+            <p class="text-gray-600 text-sm mb-4">Professional showcase for builders, plumbers, electricians</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Portfolio</span>
+              <span class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-xs font-medium">Quote Request</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 3 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
+            <i class="fas fa-briefcase text-6xl text-white"></i>
+          </div>
+          <div class="p-6">
+            <h5 class="text-xl font-bold text-gray-900 mb-2">CV/Portfolio</h5>
+            <p class="text-gray-600 text-sm mb-4">Stand out to employers with a professional online presence</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">Projects</span>
+              <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">Resume</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 4 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+            <i class="fas fa-leaf text-6xl text-white"></i>
+          </div>
+          <div class="p-6">
+            <h5 class="text-xl font-bold text-gray-900 mb-2">Coaching & Consulting</h5>
+            <p class="text-gray-600 text-sm mb-4">Professional design for coaches, consultants, and mentors</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Blog</span>
+              <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">Resources</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 5 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-yellow-500 to-amber-500 flex items-center justify-center">
+            <i class="fas fa-camera text-6xl text-white"></i>
+          </div>
+          <div class="p-6">
+            <h5 class="text-xl font-bold text-gray-900 mb-2">Creative Professionals</h5>
+            <p class="text-gray-600 text-sm mb-4">Stunning portfolios for photographers, designers, and artists</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-medium">Gallery</span>
+              <span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-medium">Shop</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 6 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
+            <i class="fas fa-store text-6xl text-white"></i>
+          </div>
+          <div class="p-6">
+            <h5 class="text-xl font-bold text-gray-900 mb-2">Small Business</h5>
+            <p class="text-gray-600 text-sm mb-4">Complete online presence for local shops and restaurants</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium">E-commerce</span>
+              <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Menu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact-form" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-block">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <i class="fas fa-envelope text-3xl text-white"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 mb-2">Ready to Get Your Website?</h3>
+          <div class="h-1 w-full bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-400 rounded-full mb-4"></div>
+        </div>
+        <p class="text-lg text-gray-600">
+          These are just examples. Your website will be completely customized to match your brand, services, and style.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-200">
+        <div class="text-center mb-8">
+          <h4 class="text-2xl font-bold text-gray-900 mb-4">Get Started Today</h4>
+          <p class="text-gray-600">Tell us about your website needs and we'll get back to you with a detailed quote</p>
+          <div class="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-emerald-50 rounded-lg border border-emerald-200">
+            <i class="fas fa-clock text-emerald-600"></i>
+            <span class="text-emerald-800 font-semibold">Response within 24 hours</span>
+          </div>
+        </div>
+
+        <form class="space-y-6">
+          <!-- Full Name -->
+          <div>
+            <label for="full-name" class="block text-sm font-semibold text-gray-900 mb-2">
+              Full Name <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+              placeholder="Your full name">
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">
+              Email Address <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+              placeholder="your.email@example.com">
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <label for="phone" class="block text-sm font-semibold text-gray-900 mb-2">
+              Phone Number <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+              placeholder="+44 1534 123456">
+          </div>
+
+          <!-- Website Type -->
+          <div>
+            <label for="website-type" class="block text-sm font-semibold text-gray-900 mb-2">
+              What type of website do you need? <span class="text-red-500">*</span>
+            </label>
+            <select
+              id="website-type"
+              name="website-type"
+              required
+              onchange="handleWebsiteTypeChange()"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all">
+              <option value="">Select your website type</option>
+              <option value="professional">Professional Services (Therapist, Coach, Consultant)</option>
+              <option value="trader">Trader/Local Business (Plumber, Electrician, etc.)</option>
+              <option value="cv">CV/Portfolio Website</option>
+              <option value="other">Other (please specify below)</option>
+            </select>
+          </div>
+
+          <!-- Professional Fields (conditional) -->
+          <div id="professional-fields" class="hidden space-y-6">
+            <div>
+              <label for="profession-type" class="block text-sm font-semibold text-gray-900 mb-2">What is your profession?</label>
+              <input
+                type="text"
+                id="profession-type"
+                name="profession-type"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+                placeholder="e.g., Yoga Instructor, Therapist, Life Coach">
+            </div>
+          </div>
+
+          <!-- Trader Fields (conditional) -->
+          <div id="trade-fields" class="hidden space-y-6">
+            <div>
+              <label for="trade-type" class="block text-sm font-semibold text-gray-900 mb-2">What type of trade/business?</label>
+              <input
+                type="text"
+                id="trade-type"
+                name="trade-type"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+                placeholder="e.g., Plumber, Electrician, Builder, Restaurant">
+            </div>
+          </div>
+
+          <!-- CV Fields (conditional) -->
+          <div id="cv-fields" class="hidden space-y-6">
+            <div>
+              <label for="career-field" class="block text-sm font-semibold text-gray-900 mb-2">What is your career field?</label>
+              <input
+                type="text"
+                id="career-field"
+                name="career-field"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+                placeholder="e.g., Software Engineer, Marketing, Finance">
+            </div>
+          </div>
+
+          <!-- Package Selection -->
+          <div>
+            <label for="package" class="block text-sm font-semibold text-gray-900 mb-2">
+              Which package are you interested in? <span class="text-red-500">*</span>
+            </label>
+            <select
+              id="package"
+              name="package"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all">
+              <option value="">Select a package</option>
+              <option value="single">Single Page (£180 - hosting & domain not included)</option>
+              <option value="basic">Basic Website (£300)</option>
+              <option value="premium">Premium Website (£600)</option>
+              <option value="custom">Custom Package (I need a quote)</option>
+            </select>
+          </div>
+
+          <!-- Domain Name -->
+          <div>
+            <label for="domain-name" class="block text-sm font-semibold text-gray-900 mb-2">Preferred Domain Name</label>
+            <div class="flex gap-2">
+              <input
+                type="text"
+                id="domain-name"
+                name="domain-name"
+                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+                placeholder="yourbusiness">
+              <select
+                id="domain-extension"
+                name="domain-extension"
+                class="w-32 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all">
+                <option value=".je">.je</option>
+                <option value=".com">.com</option>
+                <option value=".co.uk">.co.uk</option>
+                <option value=".net">.net</option>
+                <option value=".org">.org</option>
+              </select>
+            </div>
+            <p class="text-sm text-emerald-600 mt-1 font-medium">
+              <i class="fas fa-lightbulb"></i> We recommend .je for Jersey-based professionals - it's unique and establishes local presence
+            </p>
+            <p class="text-sm text-gray-500 mt-1">Note: .je domains are more expensive but less likely to be taken</p>
+          </div>
+
+          <!-- Additional Features/Requirements -->
+          <div>
+            <label for="additional-features" class="block text-sm font-semibold text-gray-900 mb-2">Additional Features or Requirements</label>
+            <textarea
+              id="additional-features"
+              name="additional-features"
+              rows="4"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all resize-none"
+              placeholder="Any specific features you need? (e.g., booking system, gallery, testimonials, social media integration, blog, contact form with specific fields)"></textarea>
+          </div>
+
+          <!-- Content Availability -->
+          <div>
+            <label for="content-ready" class="block text-sm font-semibold text-gray-900 mb-2">Do you have content ready?</label>
+            <select
+              id="content-ready"
+              name="content-ready"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all">
+              <option value="">Select an option</option>
+              <option value="yes-complete">Yes, all content is ready (text, images, etc.)</option>
+              <option value="yes-partial">Partially ready, need some help</option>
+              <option value="no">No, need help creating content</option>
+            </select>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-6">
+            <button
+              type="submit"
+              class="w-full px-8 py-4 bg-emerald-600 text-white font-bold text-lg rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02]">
+              <i class="fas fa-paper-plane mr-2"></i> Submit Your Request
+            </button>
+          </div>
+
+          <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+            <p class="text-sm text-emerald-800 text-center font-medium">
+              <i class="fas fa-info-circle mr-2"></i>
+              We'll review your request and get back to you within 24 hours with a detailed quote. Your website will be ready within 5 business days.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 bg-gradient-to-br from-emerald-900 to-teal-800 text-white relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full -ml-48 -mb-48"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <div class="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-shield-alt text-4xl text-white"></i>
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold mb-4 text-shadow">Why Choose Coderra?</h3>
+          <div class="h-1 w-32 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full mx-auto mb-8"></div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-10 border border-white/20 shadow-2xl">
+          <p class="text-lg md:text-xl text-white leading-relaxed mb-6 text-shadow">
+            Our website design services are delivered by <strong class="text-emerald-200">Dr. Galan, a PhD Computer Scientist</strong> with extensive experience in web development and digital solutions.
+          </p>
+          <p class="text-lg md:text-xl text-white leading-relaxed text-shadow">
+            We combine technical expertise with a keen eye for design to create websites that not only look great but also deliver results. With transparent pricing and a commitment to quality, we ensure your online presence truly represents your professional brand.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-white mb-2">£60/hr</div>
+              <p class="text-white/90">Competitive Rate</p>
+            </div>
+            <div class="text-center border-l border-r border-white/20">
+              <div class="text-4xl font-bold text-white mb-2">24hr</div>
+              <p class="text-white/90">Quick Response</p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-white mb-2">100%</div>
+              <p class="text-white/90">Satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center gap-6 flex-wrap">
+          <!-- Logo -->
+          <img src="assets/img/coderra_logo.jpg" alt="Coderra.je Logo" class="h-24 md:h-32">
+
+          <!-- Text stacked beside the logo -->
+          <div class="text-left">
+            <p class="text-gray-400 mb-2">
+              Innovative IT Solutions for Jersey
+            </p>
+            <p class="text-gray-500 text-sm">
+              © 2025 Coderra.je. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleWebsiteTypeChange() {
+      const websiteType = document.getElementById('website-type').value;
+      const professionalFields = document.getElementById('professional-fields');
+      const tradeFields = document.getElementById('trade-fields');
+      const cvFields = document.getElementById('cv-fields');
+
+      // Hide all conditional fields first
+      professionalFields.classList.add('hidden');
+      tradeFields.classList.add('hidden');
+      cvFields.classList.add('hidden');
+
+      // Show relevant fields based on selection
+      if (websiteType === 'professional') {
+        professionalFields.classList.remove('hidden');
+      } else if (websiteType === 'trader') {
+        tradeFields.classList.remove('hidden');
+      } else if (websiteType === 'cv') {
+        cvFields.classList.remove('hidden');
+      }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      handleWebsiteTypeChange();
+      
+      // Check if Font Awesome loaded successfully
+      const testIcon = document.createElement('i');
+      testIcon.className = 'fas fa-check';
+      document.body.appendChild(testIcon);
+      
+      setTimeout(() => {
+        const styles = window.getComputedStyle(testIcon);
+        if (styles.fontFamily.indexOf('Font Awesome') === -1) {
+          console.warn('Font Awesome may not have loaded correctly');
+        }
+        document.body.removeChild(testIcon);
+      }, 100);
+    });
+  </script>
+</body>
+</html>

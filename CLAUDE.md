@@ -4,36 +4,45 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Modern static website for Coderra IT Consultancy. Built with Tailwind CSS for simplicity and performance. The site is a multi-page static website with custom animations and a premium design aesthetic.
+Modern static website for Coderra.je IT Consultancy. Built with Tailwind CSS for simplicity and performance. The site consists of multiple static HTML pages with custom animations and a premium design aesthetic.
 
-**Services Pages:**
-- AI in the Workplace (`web-development.html`)
-- E-Commerce Development (`ecommerce-development.html`)
-- IoT Solutions (`iot-solutions.html`)
-- Education & Robotics Workshops (`education-robotics.html`)
+**Main Pages:**
+- `index.html` - Homepage with services, work showcase, and about section
+- `web-development.html` - AI in the Workplace service page
+- `ecommerce-development.html` - E-Commerce Development service page
+- `iot-solutions.html` - IoT Solutions service page
+- `education-robotics.html` - Education & Robotics Workshops service page
+- `websites.html` - Professional website design showcase
+- `404.html` - Custom 404 error page
+
+**Demo Pages (`webDemos/`):**
+- Self-contained demo websites showcasing different business templates
+- Uses Tailwind CDN (NOT the compiled `css/styles.css`)
+- Includes demos for: bakery, coaching, portfolio, wellness, carpenter, chiropractor, CV
 
 ## Project Structure
 
 ```
-coderraje/           # Root directory (deployable website)
+coderraje_v2/        # Root directory (deployable website)
 ├── index.html       # Homepage with hero, services showcase, portfolio
-├── *.html           # Service-specific landing pages (4 pages)
+├── *.html           # Service pages (4) + websites.html showcase page
 ├── 404.html         # 404 error page
+├── webDemos/        # Self-contained demo websites (use Tailwind CDN)
 ├── css/
 │   └── styles.css   # Generated Tailwind CSS (do not edit directly)
 ├── assets/
 │   ├── favicon.ico
 │   └── img/
-│       └── bg-masthead.jpg
-├── build-tools/     # Development files (not deployed)
+│       ├── bg-masthead.jpg
+│       └── coderra-favicon.svg
+├── build-tools/     # Development files (NOT deployed)
 │   ├── input.css    # Tailwind source with custom components
 │   ├── tailwind.config.js  # Extended theme with custom colors, animations
 │   ├── package.json        # Build scripts and dependencies
 │   └── node_modules/       # Dependencies (run npm install first)
 ├── CLAUDE.md        # This file
 ├── README.md        # Project documentation
-├── DEPLOY.md        # Deployment instructions
-└── .git/            # Git repository
+└── DEPLOY.md        # Deployment instructions
 ```
 
 ## Commands
@@ -63,29 +72,37 @@ Edit HTML files directly in the root directory. Each service page follows a simi
 - CTA section
 - Footer
 
+**Important:**
+- Main site pages (`index.html`, service pages) use the compiled `css/styles.css`
+- Demo pages in `webDemos/` use Tailwind CDN and inline styles - do NOT reference `css/styles.css`
+
 ### Style Changes
 1. Edit `build-tools/input.css` (for custom components) or `build-tools/tailwind.config.js` (for theme extensions)
 2. From the `build-tools/` directory, run `npm run build:css` to regenerate `css/styles.css`
 3. **Always commit both source and generated CSS**
+4. Changes only affect main site pages, not `webDemos/` directory
 
 ### Custom Components in `build-tools/input.css`
 - `.glass-card` - Glassmorphism effect for cards
 - `.btn-premium` / `.btn-secondary` - Custom button styles with hover effects
-- `.feature-card` / `.service-tile` - Interactive card components
+- `.feature-card` / `.service-tile` - Interactive card components with hover effects
 - `.gradient-text` - Gradient text effect
 - `.nav-blur` - Navigation backdrop blur
-- `.scroll-reveal` - Scroll-triggered animations
+- `.scroll-reveal` - Scroll-triggered animations (add `.revealed` class via JS)
+- `.section-header` / `.section-title` / `.section-subtitle` - Section heading styles
+- `.icon-wrapper` - Icon containers with gradient backgrounds and hover animations
+- `.animated-gradient` - Animated gradient background (15s loop)
 
 ## Design System
 
 ### Colors (in `tailwind.config.js`)
-- **primary**: Custom blue scale (50-900) - main brand color
+- **primary**: Custom blue scale (50-900) - main brand color (#0ea5e9 at 500)
 - **accent.purple**: #8b5cf6 - E-commerce services
 - **accent.teal**: #14b8a6 - IoT services
 - **accent.orange**: #f59e0b - Education services
 - **accent.pink**: #ec4899 - AI services
 
-Note: README mentions different color codes (e.g., `coderra-blue: #1a7aa6`) but these are not in the current `tailwind.config.js`. Use the `primary` and `accent` colors defined in the config.
+**Usage:** Reference as `primary-500`, `accent-purple`, etc. in Tailwind classes
 
 ### Typography
 - **Font**: Inter (Google Fonts) with variable weights
@@ -118,40 +135,56 @@ All follow consistent structure:
 - CTA section
 - Footer with navigation links
 
+## Architecture Notes
+
+### Two Different CSS Systems
+The site uses TWO different CSS approaches:
+
+1. **Main site pages** (`index.html`, service pages, `404.html`):
+   - Use compiled `css/styles.css` from Tailwind build process
+   - Styles defined in `build-tools/input.css` and `build-tools/tailwind.config.js`
+   - Requires rebuilding CSS after changes
+
+2. **Demo pages** (`webDemos/*.html`, `websites.html`):
+   - Use Tailwind CDN: `<script src="https://cdn.tailwindcss.com"></script>`
+   - Include inline `<style>` blocks for custom CSS
+   - Independent from build process
+   - Do NOT link to `css/styles.css`
+
+### Mobile Navigation
+- Service pages have a mobile hamburger menu (toggle via inline JavaScript)
+- Homepage has sticky navigation with smooth scroll
+- All use fixed/sticky positioning
+
 ## Development Workflow
 
 1. **Local development**:
    - `cd build-tools`
    - Use `npm run watch:css` + `npm run serve` concurrently (in separate terminals)
-2. **Testing**: Check all pages, test mobile menu (hamburger on mobile)
+   - Server runs on http://localhost:8000
+2. **Testing**: Check all pages, test mobile menu, verify responsive design
 3. **Before commit**: From `build-tools/`, run `npm run build:css` to ensure minified production CSS
 4. **Deployment**: Upload all files from root (excluding `build-tools/`) to hosting
 
 ## Deployment
 
-### DigitalOcean App Platform (Preferred)
-See `DEPLOY.md` for detailed steps:
-- Static site pointing to root directory
-- No build command needed (CSS pre-built)
-- Free Starter tier available
+See `DEPLOY.md` for detailed instructions.
 
-### GitHub Pages (Alternative)
-1. Repository settings → Pages
-2. Source: Deploy from branch `main`
-3. Folder: `/` (root)
-4. Site: `https://jgalan247.github.io/coderraje/`
-
-### Other Options
-Netlify, Vercel, Cloudflare Pages:
-- Deploy root directory
-- Exclude `build-tools/` folder (add to .gitignore or use build ignore settings)
+### Key Points
+- Deploy from root directory (`/`)
+- No build command needed (CSS pre-built in `css/styles.css`)
+- Exclude `build-tools/` folder from deployment
+- Supported platforms: DigitalOcean App Platform, GitHub Pages, Netlify, Vercel, Cloudflare Pages
+- Current repository: `jgalan247/coderraje`
+- Main branch for deployment: `main` (note: repo's main branch is `master`)
 
 ## Important Notes
 
 - **Static HTML only** - No template engine, SSG, or JS framework
-- **CSS must be rebuilt** - Generated `styles.css` is not auto-updated
-- **Python dependency** - `npm run serve` uses Python's HTTP server
+- **CSS must be rebuilt** - Generated `styles.css` is not auto-updated; run `npm run build:css` after changes
+- **Python dependency** - `npm run serve` uses Python's HTTP server (`python3 -m http.server`)
 - **Mobile-first** - Responsive breakpoints: sm (640px), md (768px), lg (1024px)
-- **Navigation** - Fixed header with mobile hamburger menu (toggle via JS in HTML)
 - **Build tools isolated** - All Tailwind/build dependencies in `build-tools/` folder
 - **Clean deployment** - Deploy root excluding `build-tools/` for production
+- **Two CSS approaches** - Main site uses compiled CSS; demo pages use Tailwind CDN
+- **Untracked files** - Current untracked: `webDemos/` directory and `websites.html` (as of last commit)

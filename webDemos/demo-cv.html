@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James Anderson | Senior Software Engineer</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="antialiased" style="background-color: #f9fafb;">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 shadow-sm" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="#" class="text-2xl font-bold" style="color: #7c3aed;">James Anderson</a>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#about" class="transition-colors font-medium" style="color: #374151;">About</a>
+          <a href="#experience" class="transition-colors font-medium" style="color: #374151;">Experience</a>
+          <a href="#skills" class="transition-colors font-medium" style="color: #374151;">Skills</a>
+          <a href="#projects" class="transition-colors font-medium" style="color: #374151;">Projects</a>
+          <a href="#contact" class="transition-colors font-medium" style="color: #374151;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 relative overflow-hidden" style="background: linear-gradient(to bottom right, #581c87, #6b21a8, #4f46e5); min-height: 600px;">
+    <div class="absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl" style="background: rgba(147, 51, 234, 0.2);"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full blur-3xl" style="background: rgba(99, 102, 241, 0.2);"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); color: white;">
+            <i class="fas fa-code mr-2"></i>Available for Opportunities
+          </div>
+          <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: white; text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">James Anderson</h1>
+          <p class="text-2xl mb-4 font-semibold" style="color: #e9d5ff; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">Senior Software Engineer</p>
+          <p class="text-xl mb-8 leading-relaxed" style="color: #f3e8ff; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+            Full-stack developer specializing in React, Node.js, and cloud architecture. 8+ years building scalable web applications and leading development teams.
+          </p>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="#contact" class="px-8 py-4 font-bold rounded-lg transition-all duration-300 shadow-xl" style="background: white; color: #581c87;">
+              Get in Touch
+            </a>
+            <a href="#" class="px-8 py-4 font-bold rounded-lg transition-all duration-300" style="background: #6b21a8; color: white;">
+              <i class="fas fa-download mr-2"></i>Download CV
+            </a>
+          </div>
+          <div class="flex gap-4">
+            <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center transition-colors" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); color: white;">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center transition-colors" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); color: white;">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center transition-colors" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); color: white;">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="w-full aspect-square rounded-3xl overflow-hidden shadow-2xl p-4" style="background: white;">
+            <img src="https://i.pravatar.cc/600?img=33" alt="James Anderson" class="w-full h-full object-cover rounded-2xl">
+          </div>
+          <div class="absolute -bottom-6 -right-6 rounded-2xl p-6 shadow-xl" style="background: white;">
+            <div class="text-center">
+              <div class="text-4xl font-bold mb-1" style="color: #6b21a8;">8+</div>
+              <div class="text-sm" style="color: #4b5563;">Years Experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20" style="background: white;">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4" style="color: #111827;">About Me</h2>
+        <div class="h-1 w-24 rounded-full mx-auto" style="background: #7c3aed;"></div>
+      </div>
+
+      <div class="rounded-3xl p-8 md:p-12" style="background: linear-gradient(to bottom right, #faf5ff, #eef2ff); border: 2px solid #e9d5ff;">
+        <p class="text-lg mb-6 leading-relaxed" style="color: #374151;">
+          I'm a passionate software engineer with over 8 years of experience building modern web applications. My expertise lies in creating scalable, maintainable solutions using cutting-edge technologies. I thrive in collaborative environments and have successfully led development teams to deliver high-impact projects.
+        </p>
+        <p class="text-lg mb-8 leading-relaxed" style="color: #374151;">
+          Currently based in Jersey, I've worked with startups and established companies across fintech, e-commerce, and healthcare sectors. I'm particularly interested in cloud architecture, DevOps practices, and mentoring junior developers.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="rounded-xl p-6 shadow-md text-center" style="background: white;">
+            <div class="text-3xl font-bold mb-2" style="color: #7c3aed;">50+</div>
+            <div class="text-sm" style="color: #4b5563;">Projects Delivered</div>
+          </div>
+          <div class="rounded-xl p-6 shadow-md text-center" style="background: white;">
+            <div class="text-3xl font-bold mb-2" style="color: #7c3aed;">15+</div>
+            <div class="text-sm" style="color: #4b5563;">Tech Talks Given</div>
+          </div>
+          <div class="rounded-xl p-6 shadow-md text-center" style="background: white;">
+            <div class="text-3xl font-bold mb-2" style="color: #7c3aed;">5</div>
+            <div class="text-sm" style="color: #4b5563;">Developers Mentored</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20" style="background: linear-gradient(to bottom, #f9fafb, white);">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4" style="color: #111827;">Work Experience</h2>
+        <div class="h-1 w-24 rounded-full mx-auto" style="background: #7c3aed;"></div>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Experience 1 -->
+        <div class="rounded-2xl p-8 shadow-lg" style="background: white; border-left: 4px solid #7c3aed;">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+            <div>
+              <h3 class="text-2xl font-bold mb-2" style="color: #111827;">Senior Software Engineer</h3>
+              <p class="text-lg font-semibold mb-1" style="color: #7c3aed;">TechFlow Solutions</p>
+              <p style="color: #4b5563;">Jersey, Channel Islands</p>
+            </div>
+            <div class="mt-4 md:mt-0">
+              <span class="inline-block px-4 py-2 rounded-full text-sm font-semibold" style="background: #f3e8ff; color: #6b21a8;">
+                Jan 2021 - Present
+              </span>
+            </div>
+          </div>
+          <ul class="space-y-2" style="color: #374151;">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #7c3aed;"></i>
+              <span>Led a team of 5 developers in building a microservices-based e-commerce platform serving 100k+ users</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #7c3aed;"></i>
+              <span>Architected and implemented CI/CD pipelines reducing deployment time by 70%</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #7c3aed;"></i>
+              <span>Introduced React TypeScript best practices improving code quality and maintainability</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #7c3aed;"></i>
+              <span>Mentored junior developers through code reviews and pair programming sessions</span>
+            </li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">React</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">TypeScript</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">Node.js</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">AWS</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">Docker</span>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="rounded-2xl p-8 shadow-lg" style="background: white; border-left: 4px solid #6366f1;">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+            <div>
+              <h3 class="text-2xl font-bold mb-2" style="color: #111827;">Full Stack Developer</h3>
+              <p class="text-lg font-semibold mb-1" style="color: #6366f1;">Digital Innovations Ltd</p>
+              <p style="color: #4b5563;">London, UK</p>
+            </div>
+            <div class="mt-4 md:mt-0">
+              <span class="inline-block px-4 py-2 rounded-full text-sm font-semibold" style="background: #e0e7ff; color: #4338ca;">
+                Mar 2018 - Dec 2020
+              </span>
+            </div>
+          </div>
+          <ul class="space-y-2" style="color: #374151;">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #6366f1;"></i>
+              <span>Developed customer-facing dashboards for a fintech SaaS product used by 50+ enterprise clients</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #6366f1;"></i>
+              <span>Optimized database queries reducing page load times by 60%</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #6366f1;"></i>
+              <span>Collaborated with UX designers to implement responsive, accessible interfaces</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #6366f1;"></i>
+              <span>Contributed to company's open-source component library with 500+ GitHub stars</span>
+            </li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">Vue.js</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">Python</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">PostgreSQL</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">Redis</span>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="rounded-2xl p-8 shadow-lg" style="background: white; border-left: 4px solid #c084fc;">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+            <div>
+              <h3 class="text-2xl font-bold mb-2" style="color: #111827;">Junior Software Developer</h3>
+              <p class="text-lg font-semibold mb-1" style="color: #7c3aed;">StartUp Hub</p>
+              <p style="color: #4b5563;">Manchester, UK</p>
+            </div>
+            <div class="mt-4 md:mt-0">
+              <span class="inline-block px-4 py-2 rounded-full text-sm font-semibold" style="background: #f3e8ff; color: #6b21a8;">
+                Jun 2016 - Feb 2018
+              </span>
+            </div>
+          </div>
+          <ul class="space-y-2" style="color: #374151;">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #7c3aed;"></i>
+              <span>Built RESTful APIs for mobile applications serving 10k+ daily active users</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #7c3aed;"></i>
+              <span>Implemented automated testing frameworks increasing code coverage to 85%</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-chevron-right mt-1" style="color: #7c3aed;"></i>
+              <span>Participated in agile development processes and sprint planning</span>
+            </li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">JavaScript</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">Express.js</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: #f3f4f6; color: #374151;">MongoDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20" style="background: #f9fafb;">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4" style="color: #111827;">Technical Skills</h2>
+        <div class="h-1 w-24 rounded-full mx-auto" style="background: #7c3aed;"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Frontend -->
+        <div class="rounded-2xl p-8 shadow-lg" style="background: white;">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: #f3e8ff;">
+              <i class="fas fa-laptop-code text-xl" style="color: #7c3aed;"></i>
+            </div>
+            <h3 class="text-2xl font-bold" style="color: #111827;">Frontend</h3>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">React & TypeScript</span>
+                <span class="font-semibold" style="color: #7c3aed;">Expert</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #7c3aed; width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">Next.js</span>
+                <span class="font-semibold" style="color: #7c3aed;">Advanced</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #7c3aed; width: 85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">Vue.js</span>
+                <span class="font-semibold" style="color: #7c3aed;">Advanced</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #7c3aed; width: 80%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">Tailwind CSS</span>
+                <span class="font-semibold" style="color: #7c3aed;">Expert</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #7c3aed; width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="rounded-2xl p-8 shadow-lg" style="background: white;">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: #e0e7ff;">
+              <i class="fas fa-server text-xl" style="color: #6366f1;"></i>
+            </div>
+            <h3 class="text-2xl font-bold" style="color: #111827;">Backend</h3>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">Node.js & Express</span>
+                <span class="font-semibold" style="color: #6366f1;">Expert</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #6366f1; width: 90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">Python & Django</span>
+                <span class="font-semibold" style="color: #6366f1;">Advanced</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #6366f1; width: 75%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">PostgreSQL & MongoDB</span>
+                <span class="font-semibold" style="color: #6366f1;">Advanced</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #6366f1; width: 85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">GraphQL</span>
+                <span class="font-semibold" style="color: #6366f1;">Intermediate</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #6366f1; width: 70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DevOps -->
+        <div class="rounded-2xl p-8 shadow-lg" style="background: white;">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: #f3e8ff;">
+              <i class="fas fa-cloud text-xl" style="color: #7c3aed;"></i>
+            </div>
+            <h3 class="text-2xl font-bold" style="color: #111827;">DevOps & Cloud</h3>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">AWS (EC2, S3, Lambda)</span>
+                <span class="font-semibold" style="color: #7c3aed;">Advanced</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #7c3aed; width: 85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">Docker & Kubernetes</span>
+                <span class="font-semibold" style="color: #7c3aed;">Advanced</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #7c3aed; width: 80%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">CI/CD (GitHub Actions)</span>
+                <span class="font-semibold" style="color: #7c3aed;">Expert</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #7c3aed; width: 90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium" style="color: #374151;">Terraform</span>
+                <span class="font-semibold" style="color: #7c3aed;">Intermediate</span>
+              </div>
+              <div class="w-full rounded-full h-2" style="background: #e5e7eb;">
+                <div class="h-2 rounded-full" style="background: #7c3aed; width: 65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other -->
+        <div class="rounded-2xl p-8 shadow-lg" style="background: white;">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: #e0e7ff;">
+              <i class="fas fa-tools text-xl" style="color: #6366f1;"></i>
+            </div>
+            <h3 class="text-2xl font-bold" style="color: #111827;">Tools & Others</h3>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 rounded-lg font-medium" style="background: #f3f4f6; color: #374151;">Git & GitHub</span>
+            <span class="px-4 py-2 rounded-lg font-medium" style="background: #f3f4f6; color: #374151;">Jest & Testing Library</span>
+            <span class="px-4 py-2 rounded-lg font-medium" style="background: #f3f4f6; color: #374151;">Jira & Agile</span>
+            <span class="px-4 py-2 rounded-lg font-medium" style="background: #f3f4f6; color: #374151;">Figma</span>
+            <span class="px-4 py-2 rounded-lg font-medium" style="background: #f3f4f6; color: #374151;">REST APIs</span>
+            <span class="px-4 py-2 rounded-lg font-medium" style="background: #f3f4f6; color: #374151;">WebSockets</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20" style="background: white;">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4" style="color: #111827;">Featured Projects</h2>
+        <div class="h-1 w-24 rounded-full mx-auto" style="background: #7c3aed;"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="rounded-2xl p-6 shadow-lg transition-all duration-300" style="background: linear-gradient(to bottom right, #faf5ff, #eef2ff);">
+          <div class="w-full h-48 rounded-xl mb-6 flex items-center justify-center" style="background: #ddd6fe;">
+            <i class="fas fa-shopping-cart text-6xl" style="color: #7c3aed;"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3" style="color: #111827;">E-Commerce Platform</h3>
+          <p class="mb-4" style="color: #4b5563;">Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 rounded text-xs" style="background: white; color: #374151;">React</span>
+            <span class="px-2 py-1 rounded text-xs" style="background: white; color: #374151;">Node.js</span>
+            <span class="px-2 py-1 rounded text-xs" style="background: white; color: #374151;">Stripe</span>
+          </div>
+          <a href="#" class="font-semibold transition-colors" style="color: #7c3aed;">
+            View Project <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="rounded-2xl p-6 shadow-lg transition-all duration-300" style="background: linear-gradient(to bottom right, #faf5ff, #eef2ff);">
+          <div class="w-full h-48 rounded-xl mb-6 flex items-center justify-center" style="background: #c7d2fe;">
+            <i class="fas fa-chart-line text-6xl" style="color: #6366f1;"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3" style="color: #111827;">Analytics Dashboard</h3>
+          <p class="mb-4" style="color: #4b5563;">Real-time data visualization dashboard with customizable widgets and export functionality.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 rounded text-xs" style="background: white; color: #374151;">Vue.js</span>
+            <span class="px-2 py-1 rounded text-xs" style="background: white; color: #374151;">D3.js</span>
+            <span class="px-2 py-1 rounded text-xs" style="background: white; color: #374151;">WebSocket</span>
+          </div>
+          <a href="#" class="font-semibold transition-colors" style="color: #7c3aed;">
+            View Project <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="rounded-2xl p-6 shadow-lg transition-all duration-300" style="background: linear-gradient(to bottom right, #faf5ff, #eef2ff);">
+          <div class="w-full h-48 rounded-xl mb-6 flex items-center justify-center" style="background: #ddd6fe;">
+            <i class="fas fa-mobile-alt text-6xl" style="color: #7c3aed;"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3" style="color: #111827;">Task Management App</h3>
+          <p class="mb-4" style="color: #4b5563;">Collaborative task management tool with real-time updates and team collaboration features.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 rounded text-xs" style="background: white; color: #374151;">React Native</span>
+            <span class="px-2 py-1 rounded text-xs" style="background: white; color: #374151;">Firebase</span>
+            <span class="px-2 py-1 rounded text-xs" style="background: white; color: #374151;">Redux</span>
+          </div>
+          <a href="#" class="font-semibold transition-colors" style="color: #7c3aed;">
+            View Project <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications -->
+  <section class="py-20" style="background: linear-gradient(to bottom, #f9fafb, white);">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4" style="color: #111827;">Education & Certifications</h2>
+        <div class="h-1 w-24 rounded-full mx-auto" style="background: #7c3aed;"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Education -->
+        <div class="rounded-2xl p-8 shadow-lg" style="background: white;">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: #f3e8ff;">
+              <i class="fas fa-graduation-cap text-xl" style="color: #7c3aed;"></i>
+            </div>
+            <h3 class="text-2xl font-bold" style="color: #111827;">Education</h3>
+          </div>
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-bold mb-1" style="color: #111827;">BSc Computer Science (Hons)</h4>
+              <p class="font-semibold mb-1" style="color: #7c3aed;">University of Manchester</p>
+              <p class="text-sm" style="color: #4b5563;">2013 - 2016 | First Class Honours</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="rounded-2xl p-8 shadow-lg" style="background: white;">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: #e0e7ff;">
+              <i class="fas fa-certificate text-xl" style="color: #6366f1;"></i>
+            </div>
+            <h3 class="text-2xl font-bold" style="color: #111827;">Certifications</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <i class="fas fa-award mt-1" style="color: #7c3aed;"></i>
+              <div>
+                <h4 class="font-semibold" style="color: #111827;">AWS Certified Solutions Architect</h4>
+                <p class="text-sm" style="color: #4b5563;">Amazon Web Services, 2023</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-award mt-1" style="color: #7c3aed;"></i>
+              <div>
+                <h4 class="font-semibold" style="color: #111827;">Professional Scrum Master (PSM I)</h4>
+                <p class="text-sm" style="color: #4b5563;">Scrum.org, 2022</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-award mt-1" style="color: #7c3aed;"></i>
+              <div>
+                <h4 class="font-semibold" style="color: #111827;">React Advanced Patterns</h4>
+                <p class="text-sm" style="color: #4b5563;">Frontend Masters, 2021</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20" style="background: linear-gradient(to bottom right, #581c87, #4f46e5);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4" style="color: white;">Let's Work Together</h2>
+        <div class="h-1 w-24 rounded-full mx-auto mb-6" style="background: white;"></div>
+        <p class="text-xl" style="color: #e9d5ff;">I'm always open to discussing new opportunities and interesting projects</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); color: white;">
+            <i class="fas fa-envelope text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2" style="color: white;">Email</h3>
+          <a href="mailto:james.anderson@email.com" class="transition-colors" style="color: #e9d5ff;">james.anderson@email.com</a>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); color: white;">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2" style="color: white;">LinkedIn</h3>
+          <a href="#" class="transition-colors" style="color: #e9d5ff;">linkedin.com/in/jamesanderson</a>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); color: white;">
+            <i class="fab fa-github text-2xl"></i>
+          </div>
+          <h3 class="font-bold mb-2" style="color: white;">GitHub</h3>
+          <a href="#" class="transition-colors" style="color: #e9d5ff;">github.com/janderson</a>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="mailto:james.anderson@email.com" class="inline-block px-8 py-4 font-bold rounded-lg transition-all duration-300 shadow-xl" style="background: white; color: #581c87;">
+          <i class="fas fa-paper-plane mr-2"></i>Send Me a Message
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8" style="background: #111827;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <p class="mb-2" style="color: #9ca3af;">James Anderson - Senior Software Engineer</p>
+        <p class="text-sm" style="color: #6b7280;">© 2025 James Anderson. All rights reserved. | Website by Coderra.je</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

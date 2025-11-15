@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serenity Wellness - Counselling & Therapy Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @layer base {
+      body {
+        font-family: 'Montserrat', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Cormorant Garamond', serif;
+      }
+    }
+    
+    /* Custom color palette */
+    :root {
+      --lavender: #E6E6FA;
+      --soft-purple: #D8BFD8;
+      --sage: #C8D5B9;
+      --soft-pink: #FFE4E1;
+      --cream: #FAF9F6;
+      --warm-gray: #B8B8B8;
+    }
+    
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Calming animations */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    /* Custom gradient backgrounds */
+    .gradient-lavender {
+      background: linear-gradient(135deg, #E6E6FA 0%, #D8BFD8 100%);
+    }
+    
+    .gradient-sage {
+      background: linear-gradient(135deg, #C8D5B9 0%, #E8F4E8 100%);
+    }
+    
+    .gradient-soft {
+      background: linear-gradient(135deg, #FFE4E1 0%, #FAF9F6 100%);
+    }
+    
+    /* Testimonial cards */
+    .testimonial-card {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.9);
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Booking form styling */
+    .booking-slot {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .booking-slot:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(216, 191, 216, 0.3);
+    }
+    
+    .booking-slot.selected {
+      background: linear-gradient(135deg, #D8BFD8 0%, #E6E6FA 100%);
+      color: white;
+      border-color: #D8BFD8;
+    }
+    
+    /* Smooth transitions */
+    * {
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+    
+    /* Portrait image styling */
+    .portrait-frame {
+      border: 8px solid white;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body class="antialiased bg-gray-50">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex-shrink-0">
+          <h1 class="text-3xl font-bold text-purple-800">Serenity Wellness</h1>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">About</a>
+          <a href="#services" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Services</a>
+          <a href="#testimonials" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Testimonials</a>
+          <a href="#booking" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Book Now</a>
+          <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-24 gradient-lavender relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-20 left-10 w-64 h-64 bg-purple-200/30 rounded-full blur-3xl float-animation"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-200/20 rounded-full blur-3xl float-animation" style="animation-delay: 2s;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="w-24 h-24 bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl">
+        <i class="fas fa-spa text-5xl text-purple-700"></i>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-purple-900">Find Your Inner Peace</h1>
+      <p class="text-xl md:text-2xl text-purple-800 max-w-3xl mx-auto leading-relaxed mb-8">
+        Professional counselling and therapy services in a safe, supportive environment
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#booking" class="inline-block px-8 py-4 bg-purple-700 text-white font-semibold rounded-full hover:bg-purple-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+          <i class="fas fa-calendar-check mr-2"></i>Book a Session
+        </a>
+        <a href="#about" class="inline-block px-8 py-4 bg-white text-purple-700 font-semibold rounded-full hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+          <i class="fas fa-heart mr-2"></i>Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Portrait Image -->
+        <div class="fade-in">
+          <div class="relative">
+            <img 
+              src="https://randomuser.me/api/portraits/women/65.jpg" 
+              alt="Dr. Sarah Mitchell - Therapist" 
+              class="w-full max-w-md mx-auto rounded-3xl portrait-frame">
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 gradient-lavender rounded-full flex items-center justify-center shadow-xl">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-800">15+</div>
+                <div class="text-sm text-purple-700">Years</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Content -->
+        <div class="fade-in">
+          <div class="inline-block px-4 py-2 bg-purple-100 rounded-full text-purple-700 font-semibold text-sm mb-4">
+            <i class="fas fa-user-circle mr-2"></i>About Me
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Dr. Sarah Mitchell</h2>
+          <p class="text-lg text-purple-700 font-semibold mb-6">
+            Registered Counselling Psychologist & Wellness Coach
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            Hello, I'm Dr. Sarah Mitchell, and I'm here to support you on your journey towards emotional wellbeing and personal growth. With over 15 years of experience in counselling psychology, I specialize in helping individuals navigate life's challenges with compassion and evidence-based therapeutic approaches.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            My practice is grounded in creating a safe, non-judgmental space where you can explore your thoughts and feelings freely. Whether you're dealing with anxiety, depression, relationship difficulties, or simply seeking personal development, I'm committed to walking alongside you every step of the way.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="bg-purple-50 p-4 rounded-xl">
+              <i class="fas fa-graduation-cap text-2xl text-purple-600 mb-2"></i>
+              <div class="font-semibold text-gray-900">PhD Psychology</div>
+              <div class="text-sm text-gray-600">University of London</div>
+            </div>
+            <div class="bg-purple-50 p-4 rounded-xl">
+              <i class="fas fa-certificate text-2xl text-purple-600 mb-2"></i>
+              <div class="font-semibold text-gray-900">BACP Accredited</div>
+              <div class="text-sm text-gray-600">Registered Member</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+              <i class="fas fa-check-circle mr-1"></i>CBT Specialist
+            </span>
+            <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+              <i class="fas fa-check-circle mr-1"></i>Mindfulness
+            </span>
+            <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+              <i class="fas fa-check-circle mr-1"></i>Trauma Recovery
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 gradient-soft">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 bg-purple-100 rounded-full text-purple-700 font-semibold text-sm mb-4">
+          <i class="fas fa-hands-helping mr-2"></i>Services
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How I Can Help</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Personalized therapeutic approaches tailored to your unique needs
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-purple-400">
+          <div class="w-16 h-16 gradient-lavender rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-brain text-3xl text-purple-700"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Anxiety & Stress</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Learn practical techniques to manage anxiety, reduce stress, and regain control of your life through cognitive behavioral therapy and mindfulness practices.
+          </p>
+          <div class="text-purple-600 font-semibold">
+            <i class="fas fa-clock mr-2"></i>60-minute sessions
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-pink-400">
+          <div class="w-16 h-16 bg-gradient-to-br from-pink-200 to-pink-300 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-heart-broken text-3xl text-pink-700"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Depression Support</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Compassionate support for depression using evidence-based approaches to help you rediscover joy, purpose, and motivation in your daily life.
+          </p>
+          <div class="text-pink-600 font-semibold">
+            <i class="fas fa-clock mr-2"></i>60-minute sessions
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-green-400">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-200 to-green-300 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-users text-3xl text-green-700"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Relationship Counselling</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Navigate relationship challenges, improve communication, and strengthen your connections through individual or couples counselling sessions.
+          </p>
+          <div class="text-green-600 font-semibold">
+            <i class="fas fa-clock mr-2"></i>90-minute sessions
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-indigo-400">
+          <div class="w-16 h-16 bg-gradient-to-br from-indigo-200 to-indigo-300 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-shield-alt text-3xl text-indigo-700"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Trauma & PTSD</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Specialized trauma-focused therapy to help you process difficult experiences and develop healthy coping mechanisms for healing and recovery.
+          </p>
+          <div class="text-indigo-600 font-semibold">
+            <i class="fas fa-clock mr-2"></i>60-90 minute sessions
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-yellow-400">
+          <div class="w-16 h-16 bg-gradient-to-br from-yellow-200 to-yellow-300 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-leaf text-3xl text-yellow-700"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Mindfulness & Wellness</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Develop mindfulness practices, meditation techniques, and self-care strategies to enhance your overall wellbeing and life satisfaction.
+          </p>
+          <div class="text-yellow-600 font-semibold">
+            <i class="fas fa-clock mr-2"></i>45-60 minute sessions
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-teal-400">
+          <div class="w-16 h-16 bg-gradient-to-br from-teal-200 to-teal-300 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+            <i class="fas fa-chart-line text-3xl text-teal-700"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Personal Growth</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Unlock your potential through goal-setting, confidence-building, and life coaching techniques designed to help you thrive personally and professionally.
+          </p>
+          <div class="text-teal-600 font-semibold">
+            <i class="fas fa-clock mr-2"></i>60-minute sessions
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Info -->
+      <div class="mt-16 max-w-2xl mx-auto bg-white rounded-3xl p-8 shadow-xl border-2 border-purple-200">
+        <div class="text-center">
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">Session Pricing</h3>
+          <div class="text-5xl font-bold text-purple-700 mb-2">£85</div>
+          <p class="text-gray-600 mb-6">per 60-minute session</p>
+          <div class="space-y-3 text-left max-w-md mx-auto mb-6">
+            <div class="flex items-center text-gray-700">
+              <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+              <span>Initial consultation: £65</span>
+            </div>
+            <div class="flex items-center text-gray-700">
+              <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+              <span>Package of 6 sessions: £480 (save £30)</span>
+            </div>
+            <div class="flex items-center text-gray-700">
+              <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+              <span>Online & in-person sessions available</span>
+            </div>
+          </div>
+          <a href="#booking" class="inline-block px-8 py-3 bg-purple-600 text-white font-semibold rounded-full hover:bg-purple-700 transition-all">
+            Book Your First Session
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 bg-purple-100 rounded-full text-purple-700 font-semibold text-sm mb-4">
+          <i class="fas fa-star mr-2"></i>Testimonials
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Clients Say</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Real stories from people who've found peace and clarity through therapy
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card rounded-3xl p-8 border-2 border-purple-100">
+          <div class="flex items-center mb-6">
+            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Emma Thompson" class="w-16 h-16 rounded-full mr-4 border-4 border-purple-200">
+            <div>
+              <h4 class="font-bold text-gray-900">Emma Thompson</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            "Dr. Mitchell helped me overcome years of anxiety. Her compassionate approach and practical techniques have truly changed my life. I finally feel like myself again."
+          </p>
+          <div class="text-sm text-purple-600 font-semibold">
+            <i class="fas fa-quote-right mr-2"></i>Anxiety Management
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card rounded-3xl p-8 border-2 border-purple-100">
+          <div class="flex items-center mb-6">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="James Wilson" class="w-16 h-16 rounded-full mr-4 border-4 border-purple-200">
+            <div>
+              <h4 class="font-bold text-gray-900">James Wilson</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            "After struggling with depression for months, I found Dr. Mitchell. Her understanding and professional guidance gave me hope when I needed it most. Highly recommend!"
+          </p>
+          <div class="text-sm text-purple-600 font-semibold">
+            <i class="fas fa-quote-right mr-2"></i>Depression Support
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card rounded-3xl p-8 border-2 border-purple-100">
+          <div class="flex items-center mb-6">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sophie Anderson" class="w-16 h-16 rounded-full mr-4 border-4 border-purple-200">
+            <div>
+              <h4 class="font-bold text-gray-900">Sophie Anderson</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            "The couples counselling sessions saved our relationship. Dr. Mitchell created a safe space for honest communication and helped us rediscover our connection."
+          </p>
+          <div class="text-sm text-purple-600 font-semibold">
+            <i class="fas fa-quote-right mr-2"></i>Relationship Counselling
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card rounded-3xl p-8 border-2 border-purple-100">
+          <div class="flex items-center mb-6">
+            <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Michael Roberts" class="w-16 h-16 rounded-full mr-4 border-4 border-purple-200">
+            <div>
+              <h4 class="font-bold text-gray-900">Michael Roberts</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            "Working through trauma is never easy, but Dr. Mitchell's expertise and gentle approach made the healing process manageable. I'm grateful for her support."
+          </p>
+          <div class="text-sm text-purple-600 font-semibold">
+            <i class="fas fa-quote-right mr-2"></i>Trauma Recovery
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="testimonial-card rounded-3xl p-8 border-2 border-purple-100">
+          <div class="flex items-center mb-6">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Rachel Green" class="w-16 h-16 rounded-full mr-4 border-4 border-purple-200">
+            <div>
+              <h4 class="font-bold text-gray-900">Rachel Green</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            "The mindfulness techniques I learned have transformed my daily life. Dr. Mitchell's sessions are always insightful and leave me feeling renewed."
+          </p>
+          <div class="text-sm text-purple-600 font-semibold">
+            <i class="fas fa-quote-right mr-2"></i>Mindfulness & Wellness
+          </div>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="testimonial-card rounded-3xl p-8 border-2 border-purple-100">
+          <div class="flex items-center mb-6">
+            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="David Chen" class="w-16 h-16 rounded-full mr-4 border-4 border-purple-200">
+            <div>
+              <h4 class="font-bold text-gray-900">David Chen</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            "Dr. Mitchell helped me identify and achieve my personal goals. Her coaching approach gave me the confidence to pursue my dreams. Truly life-changing!"
+          </p>
+          <div class="text-sm text-purple-600 font-semibold">
+            <i class="fas fa-quote-right mr-2"></i>Personal Growth
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="mt-16 text-center">
+        <p class="text-gray-600 mb-6">Trusted by over 200+ clients</p>
+        <div class="flex flex-wrap justify-center gap-8 items-center">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-shield-check text-3xl text-purple-600"></i>
+            <div class="text-left">
+              <div class="font-bold text-gray-900">BACP Registered</div>
+              <div class="text-sm text-gray-600">Accredited Member</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-lock text-3xl text-purple-600"></i>
+            <div class="text-left">
+              <div class="font-bold text-gray-900">100% Confidential</div>
+              <div class="text-sm text-gray-600">Private & Secure</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-award text-3xl text-purple-600"></i>
+            <div class="text-left">
+              <div class="font-bold text-gray-900">15+ Years</div>
+              <div class="text-sm text-gray-600">Experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="py-24 gradient-lavender">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-block px-4 py-2 bg-white/60 rounded-full text-purple-700 font-semibold text-sm mb-4">
+          <i class="fas fa-calendar-alt mr-2"></i>Book Your Session
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-purple-900 mb-4">Take the First Step</h2>
+        <p class="text-xl text-purple-800 max-w-2xl mx-auto">
+          Choose a time that works for you and begin your journey to wellness
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+        <form id="booking-form" class="space-y-6">
+          <!-- Personal Information -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">
+                Full Name <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full px-4 py-3 border-2 border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
+                placeholder="Your full name">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">
+                Email Address <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 border-2 border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
+                placeholder="your.email@example.com">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-gray-900 mb-2">
+                Phone Number <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                class="w-full px-4 py-3 border-2 border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
+                placeholder="+44 1534 123456">
+            </div>
+
+            <div>
+              <label for="service" class="block text-sm font-semibold text-gray-900 mb-2">
+                Service Type <span class="text-red-500">*</span>
+              </label>
+              <select
+                id="service"
+                name="service"
+                required
+                class="w-full px-4 py-3 border-2 border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all">
+                <option value="">Select a service</option>
+                <option value="anxiety">Anxiety & Stress Management</option>
+                <option value="depression">Depression Support</option>
+                <option value="relationships">Relationship Counselling</option>
+                <option value="trauma">Trauma & PTSD</option>
+                <option value="mindfulness">Mindfulness & Wellness</option>
+                <option value="growth">Personal Growth Coaching</option>
+                <option value="initial">Initial Consultation (£65)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Session Type -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-900 mb-3">
+              Session Format <span class="text-red-500">*</span>
+            </label>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <label class="flex items-center p-4 border-2 border-purple-200 rounded-xl cursor-pointer hover:bg-purple-50 transition-all">
+                <input type="radio" name="format" value="online" class="mr-3 text-purple-600 focus:ring-purple-500">
+                <div>
+                  <div class="font-semibold text-gray-900">
+                    <i class="fas fa-video mr-2 text-purple-600"></i>Online (Video)
+                  </div>
+                  <div class="text-sm text-gray-600">Secure video session from home</div>
+                </div>
+              </label>
+              <label class="flex items-center p-4 border-2 border-purple-200 rounded-xl cursor-pointer hover:bg-purple-50 transition-all">
+                <input type="radio" name="format" value="inperson" class="mr-3 text-purple-600 focus:ring-purple-500">
+                <div>
+                  <div class="font-semibold text-gray-900">
+                    <i class="fas fa-building mr-2 text-purple-600"></i>In-Person
+                  </div>
+                  <div class="text-sm text-gray-600">Face-to-face at my practice</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Date Selection -->
+          <div>
+            <label for="date" class="block text-sm font-semibold text-gray-900 mb-2">
+              Preferred Date <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              required
+              min="2025-11-05"
+              class="w-full px-4 py-3 border-2 border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all">
+          </div>
+
+          <!-- Time Slots -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-900 mb-3">
+              Preferred Time Slot <span class="text-red-500">*</span>
+            </label>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div class="booking-slot border-2 border-purple-200 rounded-xl p-3 text-center" onclick="selectTimeSlot(this)" data-time="09:00">
+                <div class="font-semibold text-gray-900">09:00 AM</div>
+                <div class="text-xs text-gray-600">Morning</div>
+              </div>
+              <div class="booking-slot border-2 border-purple-200 rounded-xl p-3 text-center" onclick="selectTimeSlot(this)" data-time="11:00">
+                <div class="font-semibold text-gray-900">11:00 AM</div>
+                <div class="text-xs text-gray-600">Late Morning</div>
+              </div>
+              <div class="booking-slot border-2 border-purple-200 rounded-xl p-3 text-center" onclick="selectTimeSlot(this)" data-time="14:00">
+                <div class="font-semibold text-gray-900">02:00 PM</div>
+                <div class="text-xs text-gray-600">Afternoon</div>
+              </div>
+              <div class="booking-slot border-2 border-purple-200 rounded-xl p-3 text-center" onclick="selectTimeSlot(this)" data-time="16:00">
+                <div class="font-semibold text-gray-900">04:00 PM</div>
+                <div class="text-xs text-gray-600">Late Afternoon</div>
+              </div>
+              <div class="booking-slot border-2 border-purple-200 rounded-xl p-3 text-center" onclick="selectTimeSlot(this)" data-time="18:00">
+                <div class="font-semibold text-gray-900">06:00 PM</div>
+                <div class="text-xs text-gray-600">Evening</div>
+              </div>
+              <div class="booking-slot border-2 border-purple-200 rounded-xl p-3 text-center" onclick="selectTimeSlot(this)" data-time="19:00">
+                <div class="font-semibold text-gray-900">07:00 PM</div>
+                <div class="text-xs text-gray-600">Evening</div>
+              </div>
+            </div>
+            <input type="hidden" id="selected-time" name="time" required>
+          </div>
+
+          <!-- Additional Notes -->
+          <div>
+            <label for="notes" class="block text-sm font-semibold text-gray-900 mb-2">
+              Additional Information (Optional)
+            </label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              class="w-full px-4 py-3 border-2 border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all resize-none"
+              placeholder="Is there anything you'd like me to know before our session? All information is kept strictly confidential."></textarea>
+          </div>
+
+          <!-- Privacy Notice -->
+          <div class="bg-purple-50 rounded-xl p-4 border border-purple-200">
+            <label class="flex items-start cursor-pointer">
+              <input type="checkbox" required class="mt-1 mr-3 text-purple-600 focus:ring-purple-500">
+              <span class="text-sm text-gray-700">
+                I understand that all information shared is confidential and I agree to the 
+                <a href="#" class="text-purple-600 underline">terms and conditions</a> and 
+                <a href="#" class="text-purple-600 underline">privacy policy</a>.
+              </span>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-4">
+            <button
+              type="submit"
+              class="w-full px-8 py-4 bg-purple-700 text-white font-bold text-lg rounded-full hover:bg-purple-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02]">
+              <i class="fas fa-calendar-check mr-2"></i> Confirm Booking
+            </button>
+          </div>
+
+          <div class="bg-purple-50 rounded-xl p-4 border border-purple-200 text-center">
+            <p class="text-sm text-purple-800 font-medium">
+              <i class="fas fa-info-circle mr-2"></i>
+              You'll receive a confirmation email within 24 hours. If you need urgent support, please call directly.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <!-- Contact Information -->
+        <div>
+          <div class="inline-block px-4 py-2 bg-purple-100 rounded-full text-purple-700 font-semibold text-sm mb-4">
+            <i class="fas fa-envelope mr-2"></i>Get in Touch
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contact Information</h2>
+          <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            Feel free to reach out with any questions or concerns. I'm here to support you on your journey to wellness.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-12 h-12 gradient-lavender rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-purple-700 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-1">Practice Location</h4>
+                <p class="text-gray-700">15 Queen Street<br>St Helier, Jersey JE2 4WD</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-12 h-12 gradient-lavender rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-phone text-purple-700 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                <p class="text-gray-700">+44 1534 765 432</p>
+                <p class="text-sm text-gray-600">Mon-Fri: 9am - 7pm</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-12 h-12 gradient-lavender rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-envelope text-purple-700 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                <p class="text-gray-700">hello@serenitywellness.je</p>
+                <p class="text-sm text-gray-600">Response within 24 hours</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-12 h-12 gradient-lavender rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-clock text-purple-700 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-1">Opening Hours</h4>
+                <p class="text-gray-700">Monday - Friday: 9:00 AM - 7:00 PM</p>
+                <p class="text-gray-700">Saturday: 10:00 AM - 4:00 PM</p>
+                <p class="text-gray-700">Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="mt-8">
+            <h4 class="font-semibold text-gray-900 mb-4">Follow Me</h4>
+            <div class="flex gap-4">
+              <a href="#" class="w-12 h-12 gradient-lavender rounded-full flex items-center justify-center hover:scale-110 transition-all">
+                <i class="fab fa-facebook-f text-purple-700 text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 gradient-lavender rounded-full flex items-center justify-center hover:scale-110 transition-all">
+                <i class="fab fa-instagram text-purple-700 text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 gradient-lavender rounded-full flex items-center justify-center hover:scale-110 transition-all">
+                <i class="fab fa-linkedin-in text-purple-700 text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div>
+          <div class="bg-gray-200 rounded-3xl overflow-hidden shadow-xl" style="height: 500px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10371.892266503254!2d-2.1147394!3d49.1867832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480c52a48c927533%3A0x519c23a30a1a6cc3!2sSt%20Helier%2C%20Jersey!5e0!3m2!1sen!2suk!4v1234567890"
+              width="100%"
+              height="500"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-purple-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- About -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Serenity Wellness</h3>
+          <p class="text-purple-200 leading-relaxed">
+            Professional counselling and therapy services dedicated to helping you find peace, clarity, and emotional wellbeing.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-purple-200 hover:text-white transition-colors">About</a></li>
+            <li><a href="#services" class="text-purple-200 hover:text-white transition-colors">Services</a></li>
+            <li><a href="#testimonials" class="text-purple-200 hover:text-white transition-colors">Testimonials</a></li>
+            <li><a href="#booking" class="text-purple-200 hover:text-white transition-colors">Book Now</a></li>
+            <li><a href="#contact" class="text-purple-200 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Professional Info -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Professional Affiliations</h4>
+          <ul class="space-y-2 text-purple-200">
+            <li><i class="fas fa-check-circle mr-2"></i>BACP Registered Member</li>
+            <li><i class="fas fa-check-circle mr-2"></i>HCPC Registered</li>
+            <li><i class="fas fa-check-circle mr-2"></i>PhD Clinical Psychology</li>
+            <li><i class="fas fa-check-circle mr-2"></i>15+ Years Experience</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-purple-800 mt-8 pt-8 text-center">
+        <p class="text-purple-200">
+          © 2025 Serenity Wellness. All rights reserved. | 
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
+          <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+        </p>
+        <p class="text-purple-300 text-sm mt-2">
+          <i class="fas fa-lock mr-1"></i>All sessions are strictly confidential
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Time slot selection
+    function selectTimeSlot(element) {
+      // Remove selection from all slots
+      document.querySelectorAll('.booking-slot').forEach(slot => {
+        slot.classList.remove('selected');
+      });
+      
+      // Add selection to clicked slot
+      element.classList.add('selected');
+      
+      // Update hidden input with selected time
+      const time = element.getAttribute('data-time');
+      document.getElementById('selected-time').value = time;
+    }
+
+    // Form submission
+    document.getElementById('booking-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Check if time slot is selected
+      if (!document.getElementById('selected-time').value) {
+        alert('Please select a time slot for your appointment.');
+        return;
+      }
+      
+      // Collect form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      // Show success message (in production, this would send to backend)
+      alert(`Thank you! Your booking request has been received.\n\nWe'll confirm your appointment for ${data.date} at ${data.time} within 24 hours.\n\nYou'll receive a confirmation email at ${data.email}`);
+      
+      // Reset form
+      this.reset();
+      document.querySelectorAll('.booking-slot').forEach(slot => {
+        slot.classList.remove('selected');
+      });
+    });
+
+    // Set minimum date to tomorrow
+    const dateInput = document.getElementById('date');
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split('T')[0];
+
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
