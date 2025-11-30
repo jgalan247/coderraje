@@ -22,42 +22,76 @@
     /* Pricing card enhancements */
     .pricing-card {
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
     .pricing-card:hover {
       transform: translateY(-8px);
-    }
-
-    .popular-badge {
-      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     }
 
     .check-icon {
       color: #10b981;
     }
 
-    /* E-Commerce Cards - Explicit gradients and colors */
-    .ecommerce-professional {
-      background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
-      color: #ffffff;
-      border: 4px solid #7e22ce;
+    /* Corner ribbon banner */
+    .ribbon {
+      position: absolute;
+      top: 44px;
+      right: -60px;
+      transform: rotate(45deg);
+      padding: 14px 70px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 10;
+      white-space: nowrap;
     }
 
-    .ecommerce-enterprise {
-      background: linear-gradient(135deg, #1d4ed8 0%, #6b21a8 100%);
-      color: #ffffff;
-      border: 4px solid #eab308;
+    .ribbon-green {
+      background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+      color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
 
-    .ecommerce-professional *,
-    .ecommerce-enterprise * {
-      color: inherit;
+    .ribbon-blue {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
 
-    .ecommerce-professional .check-mark,
-    .ecommerce-enterprise .check-mark {
-      color: #ffffff;
+    .ribbon-orange {
+      background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+      color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
+
+    /* Card icon styles */
+    .card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Price styling */
+    .price-tag {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .price-original {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+
   </style>
 </head>
 <body class="antialiased bg-gray-50">
@@ -93,366 +127,167 @@
     </div>
   </section>
 
-  <!-- Professional Website Design -->
-  <section class="py-20 bg-white">
+  <!-- Pricing Cards -->
+  <section class="py-20 bg-gradient-to-b from-white to-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">Professional Website Design</h2>
-        <p class="text-xl text-gray-600">Perfect for professionals, traders, and small businesses</p>
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Choose Your Package</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Professional web solutions for every need - from personal CVs to complete online stores</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
 
-        <!-- Basic Tier -->
-        <div class="pricing-card bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Basic</h3>
-          <p class="text-gray-600 mb-6">Essential online presence</p>
-          <div class="mb-6">
-            <span class="text-5xl font-bold text-gray-900">£200</span>
+        <!-- CV Website Card -->
+        <div class="pricing-card bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl shadow-xl p-8 border border-emerald-200 flex flex-col">
+          <div class="ribbon ribbon-green">50% Discount</div>
+
+          <div class="card-icon bg-gradient-to-br from-emerald-200 to-teal-200">
+            <i class="fas fa-file-alt text-2xl text-emerald-600"></i>
           </div>
 
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Single-page professional website</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Mobile-responsive design</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Modern, clean layout</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Basic SEO optimization</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Social media links</span>
-            </li>
-          </ul>
-
-          <a href="mailto:admin@coderra.je?subject=Basic%20Website%20Package%20Enquiry"
-             class="block w-full text-center px-6 py-3 bg-gray-100 text-gray-900 font-semibold rounded-lg
-                    hover:bg-gray-200 transition-all duration-300">
-            Get Started
-          </a>
-        </div>
-
-        <!-- Popular Tier -->
-        <div class="pricing-card bg-white rounded-2xl shadow-2xl p-8 border-2 border-blue-600 relative transform md:scale-105">
-          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <span class="popular-badge text-white px-4 py-1 rounded-full text-sm font-semibold">
-              MOST POPULAR
-            </span>
-          </div>
-
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Popular</h3>
-          <p class="text-gray-600 mb-6">Complete business solution</p>
-          <div class="mb-6">
-            <span class="text-5xl font-bold text-blue-600">£250</span>
-          </div>
-
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700"><strong>Everything in Basic</strong></span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Contact form integration</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Email notifications</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Google Maps integration</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Business hours display</span>
-            </li>
-          </ul>
-
-          <a href="mailto:admin@coderra.je?subject=Popular%20Website%20Package%20Enquiry"
-             class="block w-full text-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg
-                    hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
-            Get Started
-          </a>
-        </div>
-
-        <!-- Premium Tier -->
-        <div class="pricing-card bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
-          <p class="text-gray-600 mb-6">Complete turnkey solution</p>
-          <div class="mb-6">
-            <span class="text-5xl font-bold text-gray-900">£300</span>
-          </div>
-
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700"><strong>Everything in Popular</strong></span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">.je domain registration</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Full domain setup & configuration</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">1 year hosting included</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">SSL certificate included</span>
-            </li>
-          </ul>
-
-          <a href="mailto:admin@coderra.je?subject=Premium%20Website%20Package%20Enquiry"
-             class="block w-full text-center px-6 py-3 bg-gray-100 text-gray-900 font-semibold rounded-lg
-                    hover:bg-gray-200 transition-all duration-300">
-            Get Started
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CV/Resume Websites -->
-  <section class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">CV & Resume Websites</h2>
-        <p class="text-xl text-gray-600">Stand out to employers with a professional online presence</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-
-        <!-- CV Basic -->
-        <div class="pricing-card bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200">
           <h3 class="text-2xl font-bold text-gray-900 mb-2">CV Website</h3>
-          <p class="text-gray-600 mb-6">Professional online resume</p>
+          <p class="text-gray-500 mb-6">Professional online resume</p>
+
           <div class="mb-6">
-            <span class="text-5xl font-bold text-gray-900">£200</span>
+            <span class="price-tag text-emerald-600">£250</span>
           </div>
 
-          <ul class="space-y-4 mb-8">
+          <ul class="space-y-3 mb-8 flex-grow">
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Single-page CV layout</span>
+              <span class="text-gray-600">Single-page professional layout</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Professional design templates</span>
+              <span class="text-gray-600">Mobile-responsive design</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Work experience showcase</span>
+              <span class="text-gray-600">Work experience showcase</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Skills & qualifications section</span>
+              <span class="text-gray-600">Skills & qualifications</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Downloadable PDF version</span>
+              <span class="text-gray-600">Downloadable PDF version</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Contact information</span>
+              <span class="text-gray-600">Contact info & social links</span>
             </li>
           </ul>
 
           <a href="mailto:admin@coderra.je?subject=CV%20Website%20Enquiry"
-             class="block w-full text-center px-6 py-3 bg-gray-100 text-gray-900 font-semibold rounded-lg
-                    hover:bg-gray-200 transition-all duration-300">
+             class="block w-full text-center px-6 py-4 font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+             style="background-color: #10b981; color: white;">
             Get Started
           </a>
         </div>
 
-        <!-- CV Premium -->
-        <div class="pricing-card bg-white rounded-2xl shadow-lg p-8 border-2 border-indigo-600">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">CV Complete</h3>
-          <p class="text-gray-600 mb-6">Fully hosted solution</p>
-          <div class="mb-6">
-            <span class="text-5xl font-bold text-indigo-600">£250</span>
+        <!-- Professional Website Card -->
+        <div class="pricing-card bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl shadow-xl p-8 border-2 border-blue-300 flex flex-col transform md:scale-105 z-10">
+          <div class="ribbon ribbon-blue">50% Discount</div>
+
+          <div class="card-icon bg-gradient-to-br from-blue-200 to-indigo-200">
+            <i class="fas fa-laptop-code text-2xl text-blue-600"></i>
           </div>
 
-          <ul class="space-y-4 mb-8">
+          <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-4 w-fit">
+            MOST POPULAR
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Professional Website</h3>
+          <p class="text-gray-500 mb-6">Complete business solution</p>
+
+          <div class="mb-6">
+            <span class="price-tag text-blue-600">£500</span>
+          </div>
+
+          <ul class="space-y-3 mb-8 flex-grow">
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700"><strong>Everything in CV Website</strong></span>
+              <span class="text-gray-600">Multi-page professional site</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Domain registration & setup</span>
+              <span class="text-gray-600">Mobile-responsive design</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">1 year hosting included</span>
+              <span class="text-gray-600">Contact form & email alerts</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">SSL certificate</span>
+              <span class="text-gray-600">Google Maps integration</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Professional email setup guidance</span>
+              <span class="text-gray-600">Social media integration</span>
             </li>
             <li class="flex items-start">
               <i class="fas fa-check check-icon mr-3 mt-1"></i>
-              <span class="text-gray-700">Your own custom URL</span>
+              <span class="text-gray-600">Basic SEO optimization</span>
             </li>
           </ul>
 
-          <a href="mailto:admin@coderra.je?subject=CV%20Complete%20Package%20Enquiry"
-             class="block w-full text-center px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg
-                    hover:bg-indigo-700 transition-all duration-300 shadow-md hover:shadow-lg">
+          <a href="mailto:admin@coderra.je?subject=Professional%20Website%20Package%20Enquiry"
+             class="block w-full text-center px-6 py-4 font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+             style="background-color: #2563eb; color: white;">
             Get Started
           </a>
         </div>
 
-      </div>
-    </div>
-  </section>
+        <!-- E-Commerce Card -->
+        <div class="pricing-card bg-gradient-to-br from-orange-100 to-amber-100 rounded-3xl shadow-xl p-8 border border-orange-200 flex flex-col">
+          <div class="ribbon ribbon-orange">Introductory Offer</div>
 
-  <!-- E-Commerce Solutions -->
-  <section class="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">E-Commerce Solutions</h2>
-        <p class="text-xl text-gray-600">Powerful online stores for your business</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-
-        <!-- E-Commerce Professional -->
-        <div class="pricing-card ecommerce-professional rounded-2xl shadow-2xl p-8">
-          <h3 class="text-2xl font-bold mb-2">E-Commerce Professional</h3>
-          <p class="mb-6" style="opacity: 0.9;">Complete online store</p>
-          <div class="mb-6">
-            <span class="text-5xl font-bold">£1,500</span>
+          <div class="card-icon bg-gradient-to-br from-orange-200 to-amber-200">
+            <i class="fas fa-shopping-cart text-2xl text-orange-600"></i>
           </div>
 
-          <ul class="space-y-4 mb-8">
+          <div class="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full mb-4 w-fit">
+            INTRODUCTORY OFFER
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Online Store</h3>
+          <p class="text-gray-500 mb-6">Complete e-commerce solution</p>
+
+          <div class="mb-6">
+            <span class="price-tag text-orange-600">£1,500</span>
+          </div>
+
+          <ul class="space-y-3 mb-8 flex-grow">
             <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Custom e-commerce website design</span>
+              <i class="fas fa-check check-icon mr-3 mt-1"></i>
+              <span class="text-gray-600">Custom e-commerce design</span>
             </li>
             <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Product catalog & management</span>
+              <i class="fas fa-check check-icon mr-3 mt-1"></i>
+              <span class="text-gray-600">Product catalog & management</span>
             </li>
             <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Secure payment gateway integration</span>
+              <i class="fas fa-check check-icon mr-3 mt-1"></i>
+              <span class="text-gray-600">Secure payment gateway</span>
             </li>
             <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Shopping cart & checkout system</span>
+              <i class="fas fa-check check-icon mr-3 mt-1"></i>
+              <span class="text-gray-600">Shopping cart & checkout</span>
             </li>
             <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Domain registration & setup</span>
+              <i class="fas fa-check check-icon mr-3 mt-1"></i>
+              <span class="text-gray-600">Inventory & order tracking</span>
             </li>
             <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>SSL certificate & security</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Inventory management</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Order tracking system</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Mobile-responsive design</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Basic SEO optimization</span>
+              <i class="fas fa-check check-icon mr-3 mt-1"></i>
+              <span class="text-gray-600">Domain, SSL & hosting setup</span>
             </li>
           </ul>
 
-          <a href="mailto:admin@coderra.je?subject=E-Commerce%20Professional%20Enquiry"
-             class="block w-full text-center px-6 py-3 font-semibold rounded-lg
-                    transition-all duration-300 shadow-lg hover:shadow-xl"
-             style="background-color: #ffffff; color: #9333ea;">
-            Get Started
-          </a>
-        </div>
-
-        <!-- E-Commerce Enterprise -->
-        <div class="pricing-card ecommerce-enterprise rounded-2xl shadow-2xl p-8 relative">
-          <div class="absolute top-4 right-4">
-            <i class="fas fa-crown text-3xl" style="color: #fbbf24;"></i>
-          </div>
-
-          <h3 class="text-2xl font-bold mb-2">E-Commerce Enterprise</h3>
-          <p class="mb-6" style="opacity: 0.9;">Premium business solution</p>
-          <div class="mb-6">
-            <span class="text-5xl font-bold">£1,750</span>
-          </div>
-
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span><strong>Everything in Professional</strong></span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Professional email addresses</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Email hosting setup</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Appointment booking system</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Calendar integration</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Customer account management</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Advanced analytics dashboard</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Newsletter integration</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Priority support</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check check-mark mr-3 mt-1"></i>
-              <span>Training session included</span>
-            </li>
-          </ul>
-
-          <a href="mailto:admin@coderra.je?subject=E-Commerce%20Enterprise%20Enquiry"
-             class="block w-full text-center px-6 py-3 font-bold rounded-lg
-                    transition-all duration-300 shadow-lg hover:shadow-xl"
-             style="background-color: #fbbf24; color: #111827;">
+          <a href="mailto:admin@coderra.je?subject=E-Commerce%20Online%20Store%20Enquiry"
+             class="block w-full text-center px-6 py-4 font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+             style="background-color: #ea580c; color: white;">
             Get Started
           </a>
         </div>
